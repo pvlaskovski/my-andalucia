@@ -10,7 +10,26 @@
 </head>
 
 <body>
+    <header class="site-header">
+        <p class="header-slogan">The world is you and only you can change it</p>
 
+        {% if page.title == "Home" %}
+            <h1 class="header-logo">My Andalucia</h1>
+        {% else %}
+            <p class="header-logo">My Andalucia</p>
+        {% endif %}
+
+        <div class="logo-img-container">
+            <a href="{{site.baseurl}}/">
+                <img src="https://storm-design.net/wp-content/uploads/2017/03/barneys.png" alt="The logo for Make it Better">
+            </a>
+        </div>
+
+        {% include navigation.html %}
+    </header>
+
+
+    {{ content }}
 
 </body>
 
