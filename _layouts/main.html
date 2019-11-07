@@ -14,23 +14,29 @@
         <p class="header-slogan">The world is you and only you can change it</p>
 
         {% if page.title == "Home" %}
-            <h1 class="header-logo">My Andalucia</h1>
+        <h1 class="header-logo">My Andalucia</h1>
         {% else %}
-            <p class="header-logo">My Andalucia</p>
+        <p class="header-logo">My Andalucia</p>
         {% endif %}
 
         <div class="logo-img-container">
             <a href="{{site.baseurl}}/">
-                <img src="https://storm-design.net/wp-content/uploads/2017/03/barneys.png" alt="The logo for Make it Better">
+                <img src="https://storm-design.net/wp-content/uploads/2017/03/barneys.png"
+                    alt="The logo for Make it Better">
             </a>
         </div>
 
         {% include navigation.html %}
     </header>
 
-
     {{ content }}
 
+    <!-- SPECIFIC FOR THE BLOGPOST PAGE -->
+    {% if page.title == "Blog" %}
+    <section class="blog-all-posts">
+        {% include all-blogposts.html %}
+    </section>
+    {% endif %}
 </body>
 
 </html>
