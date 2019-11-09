@@ -10,9 +10,10 @@
 </head>
 
 <body>
+
     <header class="site-header">
         <!-- SLOGAN -->
-        <p class="header-slogan">The world is you and only you can change it</p>
+        <p class="header-slogan">Some inspiring slogan</p>
 
         <!-- LOGO -->
         {% if page.title == "Home" %}
@@ -33,7 +34,7 @@
     </header>
 
     <main class="site-content">
-
+        {{content}}
         <!-- SPECIFIC FOR THE HOMEPAGE -->
         {% if page.title == "Home" %}
             <section class="site-content-latest-posts">
