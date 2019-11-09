@@ -29,34 +29,25 @@
 
     <main class="site-content">
         {{content}}
-        <!-- SPECIFIC FOR THE HOMEPAGE -->
-        {% if page.title == "Home" %}
-            <section class="site-content-latest-posts">
-                <header>
-                    <h2>Latest posts</h2>
-                </header>
+        
     
-                <!-- Show the latest 3 posts -->
-                {% for post in site.posts limit:3 %}
-                    <section class="site-content-post-preview">
-                        <h4>
-                            <a href="{{ site.baseurl }}/{{ post.url }}">{{post.title}}</a>
-                        </h4>
-    
-                        <!-- shows only 30 words -->
-                        <p>{{ post.excerpt | truncatewords: 30 }}</p>
-                        <a href="{{ site.baseurl }}/{{ post.url }}">Read more</a>
-                    </section>
-                {% endfor %}
-            </section>
-        {% endif %}
-    
-        <!-- SPECIFIC FOR THE BLOGPOST PAGE -->
-        {% if page.title == "Blog" %}
-            <section class="blog-all-posts">
-                {% include all-blogposts.html %}
-            </section>
-        {% endif %}
+        <section class="site-content-destinations">
+            <header>
+                    <h2>Spend a day in</h2>
+            </header>
+
+            {% for destination in site.destinations limit:3 %}
+                <section class="site-content-destination-preview">
+                    <a href="{{ site.baseurl }}/{{ post.url }}">
+                        <h4>{{ destination.name }}</h4>
+                        <img src={{destination.thumb}} alt="">
+                    </a>
+                </section>
+            {% endfor %}
+
+        </section>
+
+
     </main>
 
     <aside></aside>
