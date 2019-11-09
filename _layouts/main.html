@@ -5,32 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--TODO: ADD GOODLE FONTS -->
     <link rel="stylesheet" href="{{site.baseurl}}/css/site.css">
     <title>{{ page.title }}</title>
 </head>
 
 <body>
 
-    <header class="site-header">
-        <!-- SLOGAN -->
-        <p class="header-slogan">Some inspiring slogan</p>
-
+    <header class="site-header">   
         <!-- LOGO -->
         {% if page.title == "Home" %}
-            <h1 class="header-logo">My Andalucia</h1>
+            <h1 class="header-slogan">The beautiful Andalucia</h1>
         {% else %}
-            <p class="header-logo">My Andalucia</p>
+            <p class="header-slogan">The beautiful Andalucia</p>
         {% endif %}
 
-        <!-- LOGO IMG -->
-        <div class="logo-img-container">
-            <a href="{{site.baseurl}}/">
-                <img src="https://storm-design.net/wp-content/uploads/2017/03/barneys.png" alt="The logo for Make it Better">
-            </a>
-        </div>
-
-        <!-- NAVIGATION -->
-        {% include navigation.html %}
+        <!-- MAIN IMG SECTION -->
+        <div class="img-container">
+            <!-- NAVIGATION --> 
+            {% include navigation.html %}
+        </div>    
     </header>
 
     <main class="site-content">

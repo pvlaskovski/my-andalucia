@@ -1,0 +1,37 @@
+@media screen and (max-width: 768px) {
+    /* HEADER LAYOUT */
+
+    .site-header {
+        margin-bottom: 2em;
+    }
+
+    .site-header .header-logo {
+        display: block;
+        position: absolute;
+        text-indent: -9999px;
+    }
+
+    .site-header .header-slogan,
+    .site-header .header-logo,
+    .site-header .header-nav li {
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
+
+    .site-header .header-nav li a {
+        display: block;
+    }
+
+    .logo-img-container {
+        margin: auto;
+        width: 40%;
+        padding: 1em;
+    }
+
+    .logo-img-container img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}

@@ -2,32 +2,43 @@
     margin-bottom: 2em;
 }
 
-.site-header .header-logo {
+.header-slogan {
+    text-align: center;
+    padding: 0.5em 0;
+}
+
+.img-container {
+    height: 60vh;
+    background: center no-repeat url("https://scontent.fmla1-2.fna.fbcdn.net/v/t1.0-9/73213326_10157661493426684_2322190015519522816_o.jpg?_nc_cat=101&_nc_oc=AQnnpkGheOAg_KAx9ewQ48gL_IhwKUkAAiO5LaoNd-ife1kwn6OEIK3-Lyo1UgpxjA4&_nc_ht=scontent.fmla1-2.fna&oh=0dd2ab347edf8df03589ee76a8cd9c6f&oe=5E51BB07");
+    background-size: cover;
+    position: relative;
+}
+
+.header-nav {
     display: block;
     position: absolute;
-    text-indent: -9999px;
-}
-
-.site-header .header-slogan,
-.site-header .header-logo,
-.site-header .header-nav li {
-    display: block;
-    text-align: center;
-    margin: auto;
-}
-
-.site-header .header-nav li a {
-    display: block;
-}
-
-.logo-img-container {
-    margin: auto;
-    width: 40%;
-    padding: 1em;
-}
-
-.logo-img-container img {
-    display: block;
+    bottom: 0;
     width: 100%;
-    height: auto;
+}
+
+.header-nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+
+.header-nav ul li {
+    padding: 1em 0;
+}
+
+.header-nav ul li a {
+    padding: 1.5em 1em;
+    color: var(--color-text-secondary, #ffffff);
+}
+
+.header-nav ul li a:hover {
+    /* background: var(--color-background-secondary, #ffc69b); */
+    background: var(--color-base-primary, #9bb2ff);
 }
