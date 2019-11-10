@@ -36,14 +36,17 @@
                     <h2>Spend a day in</h2>
             </header>
 
-            {% for destination in site.destinations limit:3 %}
-                <section class="site-content-destination-preview">
-                    <a href="{{ site.baseurl }}/{{ post.url }}">
-                        <h4>{{ destination.name }}</h4>
-                        <img src={{destination.thumb}} alt="">
-                    </a>
-                </section>
-            {% endfor %}
+            <section class="destinations-wrapper">
+                {% for destination in site.destinations limit:3 %}
+                    <section class="destination-preview">
+                        <a href="{{ site.baseurl }}/{{ post.url }}">
+                            <h4 class="destination-name">{{ destination.name }}</h4>
+                            <img src={{destination.thumb}} alt="">
+                        
+                        </a>
+                    </section>
+                {% endfor %}
+            </section>
 
         </section>
 
