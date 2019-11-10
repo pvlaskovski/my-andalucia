@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--TODO: ADD GOODLE FONTS -->
+
+    <!-- FONTS AWESOME -->
+    <script src="https://kit.fontawesome.com/dfa3f421ee.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{site.baseurl}}/css/site.css">
     <title>{{ page.title }}</title>
 </head>
@@ -28,9 +31,7 @@
     </header>
 
     <main class="site-content">
-        {{content}}
-        
-    
+            
         <section class="site-content-destinations">
             <header>
                     <h2>Spend a day in</h2>
@@ -38,15 +39,37 @@
 
             <section class="destinations-wrapper">
                 {% for destination in site.destinations limit:3 %}
-                    <section class="destination-preview">
-                        <a href="{{ site.baseurl }}/{{ post.url }}">
-                            <h4 class="destination-name">{{ destination.name }}</h4>
-                            <img src={{destination.thumb}} alt="">
-                        
-                        </a>
-                    </section>
+                    <a href="{{ site.baseurl }}/{{ destination.url }}" class="destination-preview">
+                        <h4 class="destination-name">{{ destination.name }}</h4>
+                        <img src={{destination.thumb}} alt="">
+                    </a>
                 {% endfor %}
             </section>
+        </section>
+
+        <section class="site-content-events">
+            <header>
+                    <h2>Events in Andalucia</h2>
+            </header>
+
+            {% for event in site.events limit:3 %}
+                <section class="event-preview">
+                    <h4 class="event-name">{{ event.name }}</h4>
+                    
+                    <div class="left-section">
+                        <i class="far fa-calendar-alt"></i>
+                        <time>{{event.date| date: "%d-%m-%Y"}}</time>
+                    </div>
+                    
+                    <div class="right-section">
+                        <p>{{ event.excerpt | truncatewords: 30 }}</p>
+                        <a href="{{ site.baseurl }}/{{ post.url }}" class="read-more">
+                            <span>Read more</span>
+                            <!-- <span> and reveal the secret of {{ event.destination }}</span> -->
+                        </a>
+                    </div>
+                </section>
+            {% endfor %}
 
         </section>
 

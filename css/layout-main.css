@@ -1,11 +1,23 @@
-/* DESTINATIONS */
-.site-content-destinations{
-    margin-bottom: 2em;
+/* GENERAL */
+.site-content h2{
+    text-align: center;
+    margin-bottom: 1em;
 }
+
+.site-content-destinations,
+.site-content-events{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 3em;
+}
+
+/* DESTINATIONS */
+
+
 .destinations-wrapper {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: stretch;
 }
 
@@ -13,6 +25,8 @@
     flex-basis: 30%;
     border: 1px solid yellow;
     position: relative;
+    vertical-align: middle;
+    text-align: center;
 }
 
 .destinations-wrapper .destination-preview img {
@@ -27,4 +41,67 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+}
+
+/* EVENTS */
+
+.site-content-events{
+    width: 100%;
+    padding: 0 10%;
+}
+
+.site-content-events{
+    padding-top: 1.5em;
+    padding-bottom: 3em;
+    background: white;
+}
+
+.event-preview{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.event-preview:not(:last-child){
+    padding-bottom: 2em;
+    margin-bottom: 1em;
+    border-bottom: 2px solid black;
+}
+
+.event-preview .event-name{
+    flex-basis: 100%;
+    padding-bottom: 1em;
+}
+
+.event-preview .left-section{
+    flex-basis: 20%;
+}
+
+.event-preview .left-section i{
+    display: block;
+    font-size: 4em;
+    text-align: center;
+    padding: 0.2em 0;
+}
+
+.event-preview .left-section time{
+    display: block;
+    text-align: center;
+}
+
+.event-preview .right-section{
+    flex-basis: 80%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+.event-preview .right-section>*{
+    padding-left: 1em;
+}
+
+.event-preview .right-section .read-more{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    display: block;
+    position: relative;
 }
