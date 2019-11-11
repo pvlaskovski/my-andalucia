@@ -1,7 +1,13 @@
-.site-header .header-slogan {
-    background: var(--color-background-secondary, #ffc69b);
-    font-size: 1em;
-    color: var(--color-text-secondary, #ffffff);
+.header-slogan{
+    font-family: var(--font-family-headings, cursive);
+    font-size: 4em;
+    color: var(--color-background-secondary, #ffc69b);
+    /* ADDING BORDER TO TEXT */
+    text-shadow:
+        -1px 0 var(--color-base-primary, #9bb2ff), 
+        0 1px var(--color-base-primary, #9bb2ff), 
+        1px 0 var(--color-base-primary, #9bb2ff), 
+        0 -1px var(--color-base-primary, #9bb2ff);
 }
 
 .header-nav ul {

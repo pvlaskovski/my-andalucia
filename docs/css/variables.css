@@ -1,4 +1,8 @@
 :root {
+
+    --font-family-basic: 'Roboto', sans-serif;
+    --font-family-headings: 'Marck Script', cursive;
+
     --font-size-small: 10px;
     --font-size-medium: 14px;
     --font-size-large: 16px;

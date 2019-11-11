@@ -1,0 +1,13 @@
+<header class="site-header">       
+    <!-- MAIN IMG SECTION -->
+    <div class="img-container">
+        <!-- LOGO -->
+        {% if page.title == "Home" %}
+            <h1 class="header-slogan">The beautiful Andalucia</h1>
+        {% else %}
+            <p class="header-slogan">The beautiful Andalucia</p>
+        {% endif %}
+        <!-- NAVIGATION --> 
+        {% include navigation.html %}
+    </div>    
+</header>

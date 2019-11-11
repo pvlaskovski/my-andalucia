@@ -5,21 +5,8 @@
 
 <body>
 
-    <header class="site-header">   
-        <!-- LOGO -->
-        {% if page.title == "Home" %}
-            <h1 class="header-slogan">The beautiful Andalucia</h1>
-        {% else %}
-            <p class="header-slogan">The beautiful Andalucia</p>
-        {% endif %}
-
-        <!-- MAIN IMG SECTION -->
-        <div class="img-container">
-            <!-- NAVIGATION --> 
-            {% include navigation.html %}
-        </div>    
-    </header>
-
+    {% include header.html %}
+    
     <main class="site-content">
             
         <section class="site-content-destinations">
