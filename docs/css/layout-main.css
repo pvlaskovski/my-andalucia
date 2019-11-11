@@ -9,8 +9,21 @@
     width: 80%;
     margin: auto;
 }
+
 .site-content-destinations{
     margin-bottom: 3em;
+}
+
+.site-content-events{
+    padding-bottom: 3em;
+}
+
+.site-footer{
+    padding: 1.5em 0;
+}
+
+.footer-technologies{
+    margin: 1em 0;
 }
 
 /* DESTINATIONS */

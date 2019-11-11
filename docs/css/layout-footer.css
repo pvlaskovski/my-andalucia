@@ -1,12 +1,11 @@
 /* FOOTER LAYOUT  */
 
 .site-footer{
-    margin-top: auto; /*remove*/
     display: flex; 
     flex-flow: row wrap;
     width: 100%;
     align-items: center;
-    background: red; /* replace */
+    background: var(--color-background-primary, #f6f5f2)
 }
 
 
@@ -30,7 +29,8 @@
 .footer-technologies .technology-img-container{
     width: 8em;
     height: 8em;
-    background: grey;
+    background: var(--color-base-primary, #9bb2ff);
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
