@@ -15,59 +15,47 @@
     </div>    
 </header>
 
-
-{% if page.title == "One Day In" %}
-    <section class="site-content-destinations">
-        <header>
-                <h2>Spend a day in</h2>
-        </header>
-
-        <section class="destinations-wrapper">
-            {% for destination in site.destinations %}
-                <a href="{{ site.baseurl }}/{{ destination.url }}" class="destination-preview">
-                    <h4 class="destination-name">{{ destination.name }}</h4>
-                    <img src={{destination.thumb}} alt="">
-                </a>
-            {% endfor %}
+<body>
+    
+    
+    {% if page.title == "One Day In" %}
+        <section class="site-content-destinations">
+            <header>
+                    <h2>Spend a day in</h2>
+            </header>
+    
+            <section class="destinations-wrapper">
+                {% for destination in site.destinations %}
+                    <a href="{{ site.baseurl }}/{{ destination.url }}" class="destination-preview">
+                        <h4 class="destination-name">{{ destination.name }}</h4>
+                        <img src={{destination.thumb}} alt="">
+                    </a>
+                {% endfor %}
+            </section>
         </section>
-    </section>
-{% endif %}
-
-{% if page.title == "Events" %}
-    {% for event in site.events %}
-        <section class="event-preview">
-            <h4 class="event-name">{{ event.name }}</h4>
-            
-            <div class="left-section">
-                <i class="far fa-calendar-alt"></i>
-                <time>{{event.date| date: "%d-%m-%Y"}}</time>
-            </div>
-            
-            <div class="right-section">
-                <p>{{ event.excerpt | truncatewords: 30 }}</p>
-                <a href="{{ site.baseurl }}/{{ post.url }}" class="read-more">
-                    <span>Read more</span>
-                    <!-- <span> and reveal the secret of {{ event.destination }}</span> -->
-                </a>
-            </div>
-        </section>
-    {% endfor %}
-{% endif %}
-
-
+    {% endif %}
+    
+    {% if page.title == "Events" %}
+        {% for event in site.events %}
+            <section class="event-preview">
+                <h4 class="event-name">{{ event.name }}</h4>
+                
+                <div class="left-section">
+                    <i class="far fa-calendar-alt"></i>
+                    <time>{{event.date| date: "%d-%m-%Y"}}</time>
+                </div>
+                
+                <div class="right-section">
+                    <p>{{ event.excerpt | truncatewords: 30 }}</p>
+                    <a href="{{ site.baseurl }}/{{ post.url }}" class="read-more">
+                        <span>Read more</span>
+                        <!-- <span> and reveal the secret of {{ event.destination }}</span> -->
+                    </a>
+                </div>
+            </section>
+        {% endfor %}
+    {% endif %}
+</body>
 
 
-<footer class="site-footer">
-    <p>Copyright &copy; Pencho Vlaskovski 2019</p>
-    <p>Powered by:</p>
-    <section class="footer-technologies">
-        <p class="technologie jekyll">
-            <div class="tech-logo"></div>
-            <span>Jekyll</span>
-        </p>
-
-        <p class="technologie html">HTML5</p>
-        <p class="technologie css">CSS3</p>
-        <p class="technologie js">Java Script</p>
-    </section>
-</footer>
+{% include footer.html %}
