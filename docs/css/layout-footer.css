@@ -11,7 +11,7 @@
 
 .site-footer .main-section{
     width: 80%;
-    border-right: 3px solid gray;
+    border-right: 3px solid var(--color-base-third, #ff9ba7);
 }
 
 .site-footer .main-section > p{
@@ -35,7 +35,7 @@
     justify-content: center;
     align-items: center;
     padding: 0.5em 0;
-    margin: 0.5em;
+    margin: 0.5em 1em;
 }
 
 .contact-us{
@@ -52,4 +52,5 @@
 }
 .contact-us i{
     font-size: 6em;
+    color: var(--color-text-primary, #505050);
 }
