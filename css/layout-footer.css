@@ -5,7 +5,7 @@
     flex-flow: row wrap;
     width: 100%;
     align-items: center;
-    background: var(--color-background-primary, #f6f5f2)
+    background: var(--color-background-primary, #f6f5f2);
 }
 
 
@@ -53,4 +53,8 @@
 .contact-us i{
     font-size: 6em;
     color: var(--color-text-primary, #505050);
+}
+
+.footer-secondary-background{
+    background: var(--color-text-secondary, #ffffff);
 }
