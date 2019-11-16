@@ -16,10 +16,6 @@
     background: var(--color-background-primary, #f6f5f2);
 }
 
-.site-content-events{
-    padding-bottom: 3em;
-}
-
 .site-footer{
     padding: 1.5em 0;
     padding-top: 3em;
@@ -69,8 +65,8 @@
 }
 
 .site-content-events{
-    padding-top: 1.5em;
-    padding-bottom: 3em;
+    padding-top: 3em;
+    padding-bottom: 5em;
     background: white;
 }
 
