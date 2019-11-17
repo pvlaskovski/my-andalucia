@@ -1,0 +1,271 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font: 14px/1.5 'Lato', sans-serif;
+}
+
+body,
+table,
+form,
+input,
+select,
+option {
+    font: inherit;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1em;
+}
+
+h1 {
+    font-size: 2.4em;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+li {
+    display: block;
+    list-style: none;
+    list-style-position: outside;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    max-height: auto;
+}
+
+/* LAYOUT */
+
+/* HEADER */
+.wrapper {
+    padding: 0 10%;
+    margin: auto;
+}
+
+
+.city-header {
+    text-align: center;
+    padding-bottom: 4em;
+}
+
+.city-header h1 {
+    padding-bottom: 0.5em;
+}
+
+
+
+/* MAIN */
+
+.wrapper{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.wrapper .city-header{
+    flex-basis: 100%;
+}
+
+.wrapper .city-main{
+    flex-basis: 80%;
+    padding-right: 1em;
+}
+
+.wrapper .city-upcoming-events{
+    flex-basis: 20%;
+    background: whitesmoke;
+    text-align: center;
+}
+
+.city-main::after { 
+    content: "";
+    display: block; 
+    clear: both;
+  }
+.city-main p {
+    padding-bottom: 1em;
+}
+
+.first-image,
+.second-image{
+    float: left;
+    height: 15em;
+    width: 10em;
+    background-image: url('1055.jpg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2em;
+    padding: 2em;
+    border: 1px solid orange;
+}
+
+.first-image{
+    margin-right: 1em;
+}
+
+.second-image{
+    float: right;
+    height: 20em;
+    width: 15em;
+    margin-left: 1em;
+}
+
+.city-upcoming-events h3{
+    padding-bottom: 1em;
+}
+
+.city-upcoming-events li{
+    padding: 0.4em 1em;
+    text-align: left;
+    border-bottom: 2px white solid;
+}
+
+.city-upcoming-events li a{
+    display: block;
+    padding: 0.4em 0.6em;
+    padding-left: 0;
+}
+
+.city-upcoming-events li:hover,
+.city-upcoming-events li:hover a{
+    background: darkgray;
+    color: white;
+}
+
+.info-card-stats i {
+    font-size: 4em;
+    padding: 0.2em 0;
+}
+
+.info-card-stats span {
+    display: block;
+    padding: 0.5em;
+}
+
+.info-card-image {
+    display: flex;
+    align-items: center;
+}
+
+.city-header-info-card {
+    width: 30em;
+    height: 20em;
+    margin: auto;
+    position: relative;
+    border: 1px solid orange;
+    overflow: hidden;
+    border-radius: 3em;
+    display: block;
+}
+
+
+.info-card-stats {
+    display: block;
+    padding-top: 2em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 100%;
+    background: white;
+    transition: left 0.3s linear;
+}
+
+
+.info-card-image {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.city-header-info-card:hover .info-card-stats {
+    left: 0;
+}
+
+
+.city-header-info-card:hover .info-card-image {
+    border: none;
+}
+
+.info-card-stats i {
+    color: orangered;
+    position: relative;
+    top: -2em;
+    animation-name: bounce;
+    animation-duration: 1s;
+    transition: top 0.5s cubic-bezier(1, 1.6, 0, 0.8) 0.3s;
+}
+
+.city-header-info-card:hover i {
+    top: 0;
+}
+
+.info-card-stats span{
+    position: relative;
+    left: 100%;
+    color: red;
+    transition: left 0.4s ease-in;
+}
+
+
+.info-card-stats span:nth-child(2){
+    transition-delay: 0.4s;
+}
+.info-card-stats span:nth-child(3){
+    transition-delay: 0.5s;
+}
+.info-card-stats span:nth-child(4){
+    transition-delay: 0.6s;
+}
+
+.info-card-stats span:nth-child(5){
+    transition-delay: 0.7s;
+}
+
+.city-header-info-card:hover span{
+    left: 0%;
+}
