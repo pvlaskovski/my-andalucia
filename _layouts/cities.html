@@ -13,19 +13,19 @@
 
         <article class="wrapper">
             <header class="city-header">
-                <h1>Sevilla</h1>
+                <h1>{{ page.title }}</h1>
                 <div class="city-header-info-card">
                     
                     <div class="info-card-image">
-                        <img src="1055.JPG" alt="Sevilla">
+                        <img src="{{ page.main_picture }}" alt="Picture of {{ page.title }}">
                     </div>
                     
                     <div class="info-card-stats">
                         <i class="fas fa-university"></i>
-                        <span>Name: Sevilla</span>
-                        <span>Population: 100 000 000 people</span>
-                        <span>Area: 420 000 km2</span>
-                        <span>Elevation: 7 m2</span>
+                        <span>Name: {{ page.title }}</span>
+                        <span>Population: {{ page.population }} people</span>
+                        <span>Area: {{ page.area }} km2</span>
+                        <span>Elevation: {{ page.elevation }} m2</span>
                     </div>
     
                 </div>

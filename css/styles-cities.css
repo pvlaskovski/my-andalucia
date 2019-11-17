@@ -131,7 +131,7 @@ img {
     float: left;
     height: 15em;
     width: 10em;
-    background-image: url('1055.jpg');
+    background-image: url('{{ page.main_picture }}');
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;

@@ -14,7 +14,7 @@
                 <section class="destinations-wrapper">
                     {% for destination in site.destinations %}
                         <a href="{{ site.baseurl }}/{{ destination.url }}" class="destination-preview">
-                            <h4 class="destination-name">{{ destination.name }}</h4>
+                            <h4 class="destination-name">{{ destination.title }}</h4>
                             <img src={{destination.thumb}} alt="">
                         </a>
                     {% endfor %}
