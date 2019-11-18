@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+
+    {% include header.html %}
+
+    <main>
+        <article class="event">
+            <header>
+                <h1 class="event-name">{{ page.title }}</h1>
+            </header>
+
+            <main class="event-content">
+                {{ content }}
+            </main>
+        </article>
+
+    </main>
+
+    {% include footer.html %}
+
+</body>
+
+</html>
