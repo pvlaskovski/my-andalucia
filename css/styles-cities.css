@@ -1,3 +1,6 @@
+--- 
+---
+
 /********** CITIES STYLES **********/
 
 .wrapper .city-upcoming-events {
@@ -8,6 +11,10 @@
 .city-upcoming-events li:hover a {
     background: var(--color-base-third, #ff9ba7);
     color: var(--color-text-secondary, #ffffff);
+}
+
+.info-card-stats{
+    background: var(--color-background-primary, #f6f5f2);
 }
 
 .info-card-stats i {
@@ -47,7 +54,7 @@
 
 .wrapper .city-main {
     flex-basis: 80%;
-    padding-right: 1em;
+    padding: 1em 3em;
 }
 
 .wrapper .city-upcoming-events {
@@ -70,7 +77,7 @@
     float: left;
     height: 15em;
     width: 10em;
-    background-image: url("https://cdn.pixabay.com/photo/2013/09/19/15/00/sunset-183808_960_720.jpg");
+    /* background-image: url({{site.baseurl}}/images/{{page.thumb}}); */
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -141,7 +148,6 @@
     right: 0;
     bottom: 0;
     left: 100%;
-    background: var(--color-text-secondary, #ffffff);
     transition: left 0.3s linear;
 }
 

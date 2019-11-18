@@ -1,3 +1,6 @@
+--- 
+--- 
+
 /********** HEADER STYLES **********/
 
 .header-slogan {
@@ -36,9 +39,7 @@
 
 .img-container {
     height: 60vh;
-
-    /* TODO: Smarter way to include background */
-    background: center no-repeat url("https://scontent.fmla1-2.fna.fbcdn.net/v/t1.0-9/73213326_10157661493426684_2322190015519522816_o.jpg?_nc_cat=101&_nc_oc=AQnnpkGheOAg_KAx9ewQ48gL_IhwKUkAAiO5LaoNd-ife1kwn6OEIK3-Lyo1UgpxjA4&_nc_ht=scontent.fmla1-2.fna&oh=0dd2ab347edf8df03589ee76a8cd9c6f&oe=5E51BB07");
+    background: center no-repeat url({{site.baseurl}}/images/ronda_bul_ring_2400_x_1600.jpg);
     background-size: cover;
     position: relative;
 }
