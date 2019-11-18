@@ -1,31 +1,49 @@
-/* GENERAL */
-.site-content h2{
+/********** MAIN STYLES **********/
+/* DESTINATIONS */
+.site-content-destinations {
+    background: var(--color-background-primary, #f6f5f2);
+}
+
+
+.destinations-wrapper .destination-preview {
+    border: 1px solid var(--color-background-secondary, #ffc69b);
+}
+
+.destinations-wrapper .destination-name {
+    color: var(--color-text-secondary, #ffffff);
+}
+
+/* EVENTS */
+.site-content-events {
+    background: var(--color-text-secondary, #ffffff);
+}
+
+/********** MAIN LAYOUT **********/
+/* DESTINATIONS */
+.site-content h2 {
     text-align: center;
     margin-bottom: 1em;
 }
 
 .site-content-destinations,
-.site-content-events{
+.site-content-events {
     padding: 0 20%;
     margin: auto;
 }
 
-.site-content-destinations{
+.site-content-destinations {
     padding-top: 3em;
     padding-bottom: 5em;
-    background: var(--color-background-primary, #f6f5f2);
 }
 
-.site-footer{
+.site-footer {
     padding: 1.5em 0;
     padding-top: 3em;
 }
 
-.footer-technologies{
+.footer-technologies {
     margin: 1em 0;
 }
-
-/* DESTINATIONS */
 
 
 .destinations-wrapper {
@@ -37,7 +55,6 @@
 
 .destinations-wrapper .destination-preview {
     flex-basis: 30%;
-    border: 1px solid yellow;
     position: relative;
     vertical-align: middle;
     text-align: center;
@@ -49,71 +66,69 @@
     max-height: 100%;
 }
 
-.destinations-wrapper .destination-name{
+.destinations-wrapper .destination-name {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
 }
 
 /* EVENTS */
 
-.site-content-events{
+.site-content-events {
     width: 100%;
     padding: 0 10%;
 }
 
-.site-content-events{
+.site-content-events {
     padding-top: 3em;
     padding-bottom: 5em;
-    background: white;
 }
 
-.event-preview{
+.event-preview {
     display: flex;
     flex-flow: row wrap;
 }
 
-.event-preview:not(:last-child){
+.event-preview:not(:last-child) {
     padding-bottom: 2em;
     margin-bottom: 1em;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--color-text-primary, #505050);
 }
 
-.event-preview .event-name{
+.event-preview .event-name {
     flex-basis: 100%;
     padding-bottom: 1em;
 }
 
-.event-preview .left-section{
+.event-preview .left-section {
     flex-basis: 20%;
 }
 
-.event-preview .left-section i{
+.event-preview .left-section i {
     display: block;
     font-size: 4em;
     text-align: center;
     padding: 0.2em 0;
 }
 
-.event-preview .left-section time{
+.event-preview .left-section time {
     display: block;
     text-align: center;
 }
 
-.event-preview .right-section{
+.event-preview .right-section {
     flex-basis: 80%;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
 }
 
-.event-preview .right-section>*{
+.event-preview .right-section>* {
     padding-left: 1em;
 }
 
-.event-preview .right-section .read-more{
+.event-preview .right-section .read-more {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     display: block;
