@@ -13,6 +13,18 @@
     color: var(--color-text-secondary, #ffffff);
 }
 
+.event-preview .left-section i{
+    color: var(--color-base-primary, #9bb2ff);   
+}
+
+.read-more {
+    color: var(--color-base-primary, #9bb2ff);
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
 /* EVENTS */
 .site-content-events {
     background: var(--color-text-secondary, #ffffff);
@@ -68,6 +80,7 @@
 
 .destinations-wrapper .destination-name {
     position: absolute;
+    width: 80%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -131,6 +144,35 @@
 .event-preview .right-section .read-more {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+    text-align: right;
     display: block;
     position: relative;
 }
+
+
+/********** MAIN ANIMATIONS **********/
+
+.destination-preview::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--color-background-secondary, #ffc69b);
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}
+
+.destination-preview:hover::before{
+    opacity: 0.5;
+}
+
+.destination-preview:hover .destination-name{
+    transition: font-size 0.3s ease-in;
+}
+
+.destination-preview:hover .destination-name{
+    font-size: 2.2em;
+}
+
