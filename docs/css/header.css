@@ -15,6 +15,7 @@
 
 .header-nav ul {
     background: rgba(255, 198, 155, 0.8);
+    overflow: hidden;
 }
 
 .header-nav ul li a {
@@ -22,8 +23,11 @@
     color: var(--color-text-secondary, #ffffff);
 }
 
-.header-nav ul li a:hover {
+.header-nav ul li:hover {
     background: var(--color-base-primary, #9bb2ff);
+    /* outline: 1px solid white; */
+    box-shadow: -2px 0px 0px 0px white;
+
 }
 
 
