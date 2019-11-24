@@ -40,7 +40,7 @@
 
 .img-container {
     height: 60vh;
-    background: center no-repeat url(/my-andalucia/images/ronda_bul_ring_2400_x_1600.jpg);
+    background: center no-repeat url(/images/ronda_bul_ring_2400_x_1600.jpg);
     background-size: cover;
     position: relative;
 }

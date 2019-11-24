@@ -51,11 +51,9 @@
                     <h3>Coming Events</h3>
                     <ul>
                         {% for event in events_ordered_by_date limit: 5 %}
-
                             <li>
                                 <a href="{{ site.baseurl }}{{ event.url }}">{{ event.title }}</a>
                             </li> 
-
                         {% endfor %}
                     </ul>
                 </aside>
