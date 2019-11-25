@@ -1,7 +1,6 @@
 html {
-    font: var(--font-size-large,14px)/1.5 var(--font-family-basic, cursive);
-    color: var(--color-text-primary, #505050);
-}
+  font: var(--font-size-large, 14px)/1.5 var(--font-family-basic, cursive);
+  color: var(--color-text-primary, #505050); }
 
 body,
 table,
@@ -9,18 +8,15 @@ form,
 input,
 select,
 option {
-    font: inherit;
-}
+  font: inherit; }
 
 * {
-    box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 h1,
 h2,
@@ -28,34 +24,40 @@ h3,
 h4,
 h5,
 h6 {
-    font-size: 1em;
-    font-family: var(--font-family-headings, sans-serif);
-}
+  font-size: 1em;
+  font-family: var(--font-family-headings, sans-serif); }
 
-h1{font-size: 3.2em;}
-h2{font-size: 2.8em;}
-h3{font-size: 2.2em;}
-h4{font-size: 1.8em;}
-h5{font-size: 1.4em;}
-h6{font-size: 1.2em;}
+h1 {
+  font-size: 3.2em; }
 
-.main h1{
-    font-size: 2.8em;
-}
+h2 {
+  font-size: 2.8em; }
+
+h3 {
+  font-size: 2.2em; }
+
+h4 {
+  font-size: 1.8em; }
+
+h5 {
+  font-size: 1.4em; }
+
+h6 {
+  font-size: 1.2em; }
+
+.main h1 {
+  font-size: 2.8em; }
 
 li {
-    display: block;
-    list-style: none;
-    list-style-position: outside;
-}
+  display: block;
+  list-style: none;
+  list-style-position: outside; }
 
 a {
-    text-decoration: none;
-    color: var(--color-text-primary, #505050);
-}
+  text-decoration: none;
+  color: var(--color-text-primary, #505050); }
 
 img {
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-}
+  display: block;
+  max-width: 100%;
+  max-height: 100%; }

@@ -1,96 +1,104 @@
 /********** FOOTER STYLES **********/
 .site-footer {
-    background: var(--color-background-primary, #f6f5f2);
-}
+  background: var(--color-background-primary, #f6f5f2); }
 
 .site-footer .main-section {
-    border-right: 3px solid var(--color-base-third, #ff9ba7);
-}
+  border-right: 3px solid var(--color-base-third, #ff9ba7); }
 
 .contact-us i {
-    font-size: 6em;
-    color: var(--color-text-primary, #505050);
-}
+  font-size: 6em;
+  color: var(--color-text-primary, #505050); }
 
 .footer-secondary-background {
-    background: var(--color-text-secondary, #ffffff);
-}
+  background: var(--color-text-secondary, #ffffff); }
 
 /********** FOOTER LAYOUT **********/
-
 .site-footer {
-    display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-    align-items: center;
-}
-
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  width: 100%;
+  -webkit-box-align: center;
+          align-items: center; }
 
 .site-footer .main-section {
-    width: 80%;
-}
+  width: 80%; }
 
-.site-footer .main-section>p {
-    width: 100%;
-    text-align: center;
-}
+.site-footer .main-section > p {
+  width: 100%;
+  text-align: center; }
 
 .footer-technologies {
-    display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-    justify-content: center;
-}
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  width: 100%;
+  -webkit-box-pack: center;
+          justify-content: center; }
 
 .footer-technologies .technology-img-container {
-    width: 8em;
-    height: 8em;
-    background: var(--color-base-primary, #9bb2ff);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5em 0;
-    margin: 0.5em 1em;
-}
+  width: 8em;
+  height: 8em;
+  background: var(--color-base-primary, #9bb2ff);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  padding: 0.5em 0;
+  margin: 0.5em 1em; }
 
 .contact-us {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    flex-basis: 20%;
-}
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  flex-basis: 20%; }
 
 .contact-us p {
-    flex-basis: 100%;
-    text-align: center;
-}
-
+  flex-basis: 100%;
+  text-align: center; }
 
 /********** FOOTER ANIMATIONS **********/
-
 /* TRANSITIONS */
 .technology-img-container:hover .technologie {
-    transition: transform 1.5s;
-    transform-style: preserve-3d;
-    transform: rotateY(360deg);
-}
+  -webkit-transition: -webkit-transform 1.5s;
+  transition: -webkit-transform 1.5s;
+  transition: transform 1.5s;
+  transition: transform 1.5s, -webkit-transform 1.5s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg); }
 
 /* ANIMATION WITH KEYFRAME */
 .send-mail:hover {
-    animation-duration: 2s;
-    animation-name: change-color;
-    animation-fill-mode: forwards;
-}
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-name: change-color;
+          animation-name: change-color;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
 
+@-webkit-keyframes change-color {
+  from {
+    color: var(--color-text-primary, #505050); }
+  to {
+    color: var(--color-base-primary, #9bb2ff); } }
 
 @keyframes change-color {
-    from {
-        color: var(--color-text-primary, #505050);
-    }
-
-    to {
-        color: var(--color-base-primary, #9bb2ff);
-    }
-}
+  from {
+    color: var(--color-text-primary, #505050); }
+  to {
+    color: var(--color-base-primary, #9bb2ff); } }
