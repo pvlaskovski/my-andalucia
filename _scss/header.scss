@@ -18,20 +18,19 @@
 .header-nav ul {
     background: rgba(255, 198, 155, 0.8);
     overflow: hidden;
+    
+    li a {
+        padding: 1.5em 1em;
+        color: var(--color-text-secondary, #ffffff);
+    }
+    
+    li:hover {
+        background: var(--color-base-primary, #9bb2ff);
+        /* outline: 1px solid white; */
+        box-shadow: -2px 0px 0px 0px white;
+    
+    }
 }
-
-.header-nav ul li a {
-    padding: 1.5em 1em;
-    color: var(--color-text-secondary, #ffffff);
-}
-
-.header-nav ul li:hover {
-    background: var(--color-base-primary, #9bb2ff);
-    /* outline: 1px solid white; */
-    box-shadow: -2px 0px 0px 0px white;
-
-}
-
 
 /********** HEADER LAYOUT **********/
 
@@ -52,15 +51,16 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+    
+    ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: stretch;
+        
+        li {
+            padding: 1em 0;
+        }
+    }
 }
 
-.header-nav ul {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: stretch;
-}
-
-.header-nav ul li {
-    padding: 1em 0;
-}
