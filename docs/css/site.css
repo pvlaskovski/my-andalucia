@@ -148,7 +148,8 @@ img {
 
 .img-container {
   height: 60vh;
-  background: center no-repeat url(/images/ronda_bul_ring_2400_x_1600.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   position: relative; }
 
