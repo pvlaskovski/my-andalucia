@@ -1,6 +1,3 @@
-// --- 
-// ---
-
 /********** CITIES STYLES **********/
 
 
@@ -19,15 +16,14 @@
 
 
 .info-card-stats{
-    background: var(--color-background-primary, #f6f5f2);
-    
+
     i {
-        color: var(--color-base-primary, #9bb2ff);
+        color: var(--color-text-secondary, #ffffff);
        
     }
     
     span {
-        color: var(--color-base-primary, #9bb2ff);
+        color: var(--color-text-secondary, #ffffff);
     }
 }
 
@@ -84,7 +80,6 @@
     float: left;
     height: 15em;
     width: 10em;
-    /* background-image: url({{site.baseurl}}/images/{{page.thumb}}); */
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -124,6 +119,9 @@
 }
 
 .info-card-stats {
+    background-image: url("/images/spain_fag_2400_x_1600.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     padding-top: 2em;
     position: absolute;
     top: 0;
@@ -131,7 +129,18 @@
     bottom: 0;
     left: 100%;
     transition: left 0.3s linear;
-    
+
+    &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: var(--color-text-primary, #505050);
+        opacity: 0.4;
+    }
+
     i {
         font-size: 4em;
         padding: 0.2em 0;
@@ -167,11 +176,6 @@
     }
 }
 
-.info-card-image {
-    display: flex;
-    align-items: center;
-}
-
 .city-header-info-card {
     width: 30em;
     height: 20em;
@@ -184,10 +188,6 @@
     
     &:hover .info-card-stats {
         left: 0;
-    }
-    
-    &:hover .info-card-image {
-        border: none;
     }
     
     &:hover i {

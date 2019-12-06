@@ -7,12 +7,11 @@
   background: var(--color-base-third, #ff9ba7);
   color: var(--color-text-secondary, #ffffff); }
 
-.info-card-stats {
-  background: var(--color-background-primary, #f6f5f2); }
-  .info-card-stats i {
-    color: var(--color-base-primary, #9bb2ff); }
-  .info-card-stats span {
-    color: var(--color-base-primary, #9bb2ff); }
+.info-card-stats i {
+  color: var(--color-text-secondary, #ffffff); }
+
+.info-card-stats span {
+  color: var(--color-text-secondary, #ffffff); }
 
 /********** CITIES LAYOUT **********/
 /* CITIES HEADER */
@@ -52,7 +51,6 @@
   float: left;
   height: 15em;
   width: 10em;
-  /* background-image: url({{site.baseurl}}/images/{{page.thumb}}); */
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -82,6 +80,9 @@
     padding-left: 0; }
 
 .info-card-stats {
+  background-image: url("/images/spain_fag_2400_x_1600.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   padding-top: 2em;
   position: absolute;
   top: 0;
@@ -90,6 +91,15 @@
   left: 100%;
   -webkit-transition: left 0.3s linear;
   transition: left 0.3s linear; }
+  .info-card-stats:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--color-text-primary, #505050);
+    opacity: 0.4; }
   .info-card-stats i {
     font-size: 4em;
     padding: 0.2em 0;
@@ -121,12 +131,6 @@
       -webkit-transition-delay: 0.7s;
               transition-delay: 0.7s; }
 
-.info-card-image {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-          align-items: center; }
-
 .city-header-info-card {
   width: 30em;
   height: 20em;
@@ -138,8 +142,6 @@
   display: block; }
   .city-header-info-card:hover .info-card-stats {
     left: 0; }
-  .city-header-info-card:hover .info-card-image {
-    border: none; }
   .city-header-info-card:hover i {
     top: 0; }
 
