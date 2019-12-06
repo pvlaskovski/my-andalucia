@@ -48,7 +48,10 @@ gulp.task("watch", function () {
             "./*.yml",
             "./_includes/*.html",
             "./_layouts/*.html",
-            "./_posts/**/*.*"
+            "./_posts/**/*.*",
+            "./_destinations/*.html",
+            "./_events/*.html",
+            "./_data/*.*"
         ]
     ).on('change', gulp.series('jekyll', 'sass'));
 

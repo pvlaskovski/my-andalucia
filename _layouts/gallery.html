@@ -1,0 +1,23 @@
+{% include head.html %}
+
+{% include header.html %}
+
+<body>
+    <p>We are using gallery Layout</p>
+
+    <section>
+        <ul class="gallery">
+    
+            {% for picture in page.pictures %}
+                <li class="gallery-img-container {{ picture.orientation }}">
+                    <a href="#">
+                        <img src="{{ site.baseurl }}/images/{{ picture.url }}" alt="{{ picture.alt }}" >
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    {% include footer.html %}
+</body>
+

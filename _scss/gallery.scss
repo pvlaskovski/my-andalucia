@@ -1,0 +1,123 @@
+.gallery {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: dense;
+    gap: 0.1em;
+    background: white;
+
+    .gallery-img-container {
+        display: block;
+        overflow: hidden;
+        position: relative;
+    }
+
+    ul {
+        list-style: none;
+        display: block;
+        list-style-position: outside;
+        padding: 0;
+    }
+
+    a {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        max-width: none;
+        max-height: none;
+    }
+
+    .portrait img {
+        height: 100%;
+        width: auto;
+    }
+
+    .panorama img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .gallery-img-container.landscape::before {
+        content: "";
+        padding-bottom: 56%;
+        display: block;
+    }
+
+    .gallery-img-container.portrait::before {
+        content: "";
+        padding-bottom: 120%;
+        display: block;
+    }
+
+    .gallery-img-container.panorama::before {
+        content: "";
+        display: block;
+        padding-bottom: 30%;
+
+    }
+
+
+    .gallery-img-container.portrait {
+        grid-row: span 2;
+    }
+
+    .gallery-img-container.panorama {
+        grid-column: span 2;
+    }
+}
+
+
+/* HOVER */
+
+.gallery {
+
+    .gallery-img-container a {
+        transition: background 3s ease-in;
+    }
+
+    .gallery-img-container:hover a::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: gray;
+        opacity: 0;
+        animation: increace-opacity 0.1s ease-in forwards;
+    }
+
+    .gallery-img-container span {
+        position: absolute;
+        top: 5%;
+        right: 10%;
+        color: white;
+        z-index: 1;
+    }
+
+}
+
+
+@keyframes increace-opacity {
+    form {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.6;
+    }
+}
