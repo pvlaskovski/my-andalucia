@@ -53,7 +53,7 @@ gulp.task("watch", function () {
             "./_events/*.html",
             "./_data/*.*"
         ]
-    ).on('change', gulp.series('jekyll', 'sass'));
+    ).on('change', gulp.series('jekyll-dev', 'sass'));
 
     gulp.watch('docs/**/*.html').on('change', browserSync.reload);
     gulp.watch('docs/**/*.js').on('change', browserSync.reload);

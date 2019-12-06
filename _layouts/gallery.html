@@ -1,23 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
 {% include head.html %}
 
-{% include header.html %}
 
 <body>
-    <p>We are using gallery Layout</p>
+    {% include header.html %}
 
-    <section>
-        <ul class="gallery">
-    
-            {% for picture in page.pictures %}
-                <li class="gallery-img-container {{ picture.orientation }}">
-                    <a href="#">
-                        <img src="{{ site.baseurl }}/images/{{ picture.url }}" alt="{{ picture.alt }}" >
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-    </section>
+    <main class="site-content">
+        <h1 class="gallery-heading">Enjoy the beauty of Andalucia</h1>
+        
+        <section class="section-gallery">
+            <ul class="gallery">
+        
+                {% for picture in page.pictures %}
+                    <li class="gallery-img-container {{ picture.orientation }}">
+                        <a href="#">
+                            <img src="{{ site.baseurl }}/images/{{ picture.url }}" alt="{{ picture.alt }}" >
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
 
     {% include footer.html %}
 </body>
 
+</html>

@@ -1,14 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
 {% include head.html %}
 
-{% include header.html %}
 
 <body>
+    {% include header.html %}
+    
     <main class="site-content">
 
         {% if page.title == "One Day In" %}
             <section class="site-content-destinations">
                 <header>
-                        <h2>Spend a day in</h2>
+                        <h1>Spend a day in</h1>
                 </header>
         
                 <section class="destinations-wrapper">
@@ -55,3 +59,4 @@
     {% include footer.html %}
 </body>
 
+</html>
