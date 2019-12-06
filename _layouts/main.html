@@ -4,51 +4,96 @@
 {% include head.html %}
 
 <body>
-
     {% include header.html %}
 
     <main class="site-content">
 
-        <section class="site-content-destinations">
-            <header>
-                <h2>Spend a day in</h2>
-            </header>
+        {% if page.title == "Home" %}
+            <section class="site-content-destinations">
+                <header>
+                    <h2>Spend a day in</h2>
+                </header>
 
-            <section class="destinations-wrapper">
-                {% for destination in site.destinations limit:3 %}
-                <a href="{{ site.baseurl }}{{ destination.url }}" class="destination-preview">
-                    <h4 class="destination-name">{{ destination.title }}</h4>
-                    <img src={{site.baseurl}}/images/{{destination.thumb}} alt="">
-                </a>
-                {% endfor %}
+                <section class="destinations-wrapper">
+                    {% for destination in site.destinations limit:3 %}
+                    <a href="{{ site.baseurl }}{{ destination.url }}" class="destination-preview">
+                        <h4 class="destination-name">{{ destination.title }}</h4>
+                        <img src={{site.baseurl}}/images/{{destination.thumb}} alt="">
+                    </a>
+                    {% endfor %}
+                </section>
             </section>
-        </section>
 
+            <section class="site-content-events">
+                <header>
+                    <h2>Events in Andalucia</h2>
+                </header>
+
+                {% for event in site.events limit:3 %}
+                <section class="event-preview">
+                    <h4 class="event-name">{{ event.title }}</h4>
+
+                    <div class="left-section">
+                        <i class="far fa-calendar-alt"></i>
+                        <time  datetime= "{{ event.date }}">{{event.date| date: "%d-%m-%Y"}}</time>
+                    </div>
+
+                    <div class="right-section">
+                        <p>{{ event.excerpt | truncatewords: 30 }}</p>
+                        <a href="{{ site.baseurl }}{{ event.url }}" class="read-more">
+                            <span>Read more...</span>
+                            <!-- <span> and reveal the secret of {{ event.destination }}</span> -->
+                        </a>
+                    </div>
+                </section>
+                {% endfor %}
+
+            </section>
+        {% endif %}
+
+        {% if page.title == "One Day In" %}
+            <section class="site-content-destinations">
+                <header>
+                        <h1>Spend a day in</h1>
+                </header>
+
+                <section class="destinations-wrapper">
+                    {% for destination in site.destinations %}
+                        <a href="{{ site.baseurl }}{{ destination.url }}" class="destination-preview">
+                            <h4 class="destination-name">{{ destination.title }}</h4>
+                            <img src={{site.baseurl}}/images/{{destination.thumb}} alt="">
+                        </a>
+                    {% endfor %}
+                </section>
+            </section>
+        {% endif %}
+
+        {% if page.title == "Events"%}
         <section class="site-content-events">
             <header>
-                <h2>Events in Andalucia</h2>
+                    <h1>Events in Andalucia</h1>
             </header>
-
-            {% for event in site.events limit:3 %}
-            <section class="event-preview">
-                <h4 class="event-name">{{ event.title }}</h4>
-
-                <div class="left-section">
-                    <i class="far fa-calendar-alt"></i>
-                    <time  datetime= "{{ event.date }}">{{event.date| date: "%d-%m-%Y"}}</time>
-                </div>
-
-                <div class="right-section">
-                    <p>{{ event.excerpt | truncatewords: 30 }}</p>
-                    <a href="{{ site.baseurl }}{{ event.url }}" class="read-more">
-                        <span>Read more...</span>
-                        <!-- <span> and reveal the secret of {{ event.destination }}</span> -->
-                    </a>
-                </div>
-            </section>
+        
+            {% for event in site.events%}
+                <section class="event-preview">
+                    <h4 class="event-name">{{ event.title }}</h4>
+                    
+                    <div class="left-section">
+                        <i class="far fa-calendar-alt"></i>
+                        <time>{{event.date| date: "%d-%m-%Y"}}</time>
+                    </div>
+                    
+                    <div class="right-section">
+                        <p>{{ event.excerpt | truncatewords: 30 }}</p>
+                        <a href="{{ site.baseurl }}/{{ post.url }}" class="read-more">
+                            <span>Read more</span>
+                            <!-- <span> and reveal the secret of {{ event.destination }}</span> -->
+                        </a>
+                    </div>
+                </section>
             {% endfor %}
-
         </section>
+        {% endif %}
 
 
     </main>
