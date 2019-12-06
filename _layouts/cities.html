@@ -28,27 +28,30 @@
     
                 </div>
             </header>
+
             <!-- Selecting the events for the current city -->
             {% assign events_ordered_by_date = site.events | where: 'destination', {{page.title}} | sort: 'date' | reverse  %}
     
             <main class="city-main {%if events_ordered_by_date.size == 0 %}no-events{%endif%}" >
-                <div class="first-image" style="background-image: url({{site.baseurl}}/images/{{page.first_picture}});">
-                    <!-- <img src="1055.jpg" alt=""> -->
-                </div>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, esse. Eos voluptatum odit minima exercitationem cum voluptate vitae nemo. Ipsum necessitatibus nulla nemo illo architecto obcaecati qui repellat laboriosam tenetur.</p>
-                <div class="second-image" style="background-image: url({{site.baseurl}}/images/{{page.second_picture}});">
-                    <!-- <img src="1055.jpg" alt=""> -->
-                </div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti impedit ex tempora voluptatum, magnam animi voluptas ullam eos reiciendis quisquam corporis at laboriosam, cum illo sint molestias eveniet tempore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, eligendi dicta ratione error quae non ea cupiditate rem magni accusamus sed ducimus consequuntur doloremque aspernatur expedita tempore est beatae modi?</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti impedit ex tempora voluptatum, magnam animi voluptas ullam eos reiciendis quisquam corporis at laboriosam, cum illo sint molestias eveniet tempore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, eligendi dicta ratione error quae non ea cupiditate rem magni accusamus sed ducimus consequuntur doloremque aspernatur expedita tempore est beatae modi?</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti impedit ex tempora voluptatum, magnam animi voluptas ullam eos reiciendis quisquam corporis at laboriosam, cum illo sint molestias eveniet tempore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, eligendi dicta ratione error quae non ea cupiditate rem magni accusamus sed ducimus consequuntur doloremque aspernatur expedita tempore est beatae modi?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis recusandae accusantium dolorem, tempore deserunt aperiam aliquam maiores, perferendis et sed ullam</p>
-        
+                {% for paragraph in page.text %}
+                    {% if forloop.index == 1 %}
+                        <div class="first-image" style="background-image: url({{site.baseurl}}/images/{{page.first_picture}});"></div>
+                        <p>{{ paragraph }}</p>
+                    {% elsif forloop.index == 2 %}
+                        <div class="second-image" style="background-image: url({{site.baseurl}}/images/{{page.second_picture}});"></div>
+                        <p>{{ paragraph }}</p>
+                    {% else %}
+                        <p>{{ paragraph }} </p>
+                    {% endif %}
+                
+                {% endfor %}
+
             </main>
     
+            <!-- Show sidebar if there are upcoming events -->
             {%if events_ordered_by_date.size > 0 %}
                 <aside class="city-upcoming-events">
-                    <h3>Coming Events</h3>
+                    <h3>Upcoming Events</h3>
                     <ul>
                         {% for event in events_ordered_by_date limit: 5 %}
                             <li>
