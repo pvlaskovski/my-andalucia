@@ -1,6 +1,12 @@
 <!-- SPECIFIC FOR THE BLOGPOST PAGE -->
 {% if page.title == "Events" %}
     <section class="blog-all-posts">
-        {% include all-blogposts.html %}
+        <ul>
+            {% for post in site.posts %}
+                <li>
+                    <a href="{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
     </section>
 {% endif %}

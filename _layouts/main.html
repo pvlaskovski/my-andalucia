@@ -9,6 +9,7 @@
     <main class="site-content">
 
         {% if page.title == "Home" %}
+            <!-- Destinations -->
             <section class="site-content-destinations">
                 <header>
                     <h2>Spend a day in</h2>
@@ -24,6 +25,7 @@
                 </section>
             </section>
 
+            <!-- Events -->
             <section class="site-content-events">
                 <header>
                     <h2>Events in Andalucia</h2>
@@ -52,6 +54,7 @@
         {% endif %}
 
         {% if page.title == "One Day In" %}
+            <!-- Destinations -->
             <section class="site-content-destinations">
                 <header>
                         <h1>Spend a day in</h1>
@@ -69,6 +72,7 @@
         {% endif %}
 
         {% if page.title == "Events"%}
+        <!-- Events -->
         <section class="site-content-events">
             <header>
                     <h1>Events in Andalucia</h1>
@@ -76,7 +80,7 @@
         
             {% for event in site.events%}
                 <section class="event-preview">
-                    <h4 class="event-name">{{ event.title }}</h4>
+                    <h3 class="event-name">{{ event.title }}</h3>
                     
                     <div class="left-section">
                         <i class="far fa-calendar-alt"></i>
@@ -85,7 +89,7 @@
                     
                     <div class="right-section">
                         <p>{{ event.excerpt | truncatewords: 30 }}</p>
-                        <a href="{{ site.baseurl }}/{{ post.url }}" class="read-more">
+                        <a href="{{ site.baseurl }}{{ event.url }}" class="read-more">
                             <span>Read more</span>
                             <!-- <span> and reveal the secret of {{ event.destination }}</span> -->
                         </a>
