@@ -1,20 +1,23 @@
 /********** FOOTER STYLES **********/
+
+
+
 .site-footer {
-    background: var(--color-background-primary, #f6f5f2);
+    background: $color-background-primary;
     
     .main-section {
-        border-right: 3px solid var(--color-base-third, #ff9ba7);
+        border-right: 3px solid $color-base-third;
     }
 }
 
 
 .contact-us i {
     font-size: 6em;
-    color: var(--color-text-primary, #505050);
+    color: $color-text-primary;
 }
 
 .footer-secondary-background {
-    background: var(--color-text-secondary, #ffffff);
+    background: $color-text-secondary;
 }
 
 /********** FOOTER LAYOUT **********/
@@ -47,7 +50,7 @@
     .technology-img-container {
         width: 8em;
         height: 8em;
-        background: var(--color-base-primary, #9bb2ff);
+        background: $color-base-primary;
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -92,10 +95,10 @@
 
 @keyframes change-color {
     from {
-        color: var(--color-text-primary, #505050);
+        color: $color-text-primary;
     }
 
     to {
-        color: var(--color-base-primary, #9bb2ff);
+        color: $color-base-primary;
     }
 }

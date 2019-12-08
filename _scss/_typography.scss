@@ -1,6 +1,6 @@
 html {
-    font: var(--font-size-large,14px)/1.5 var(--font-family-basic, cursive);
-    color: var(--color-text-primary, #505050);
+    font: #{$font-size-large}/1.5 $font-family-basic;
+    color: $color-text-primary;
 }
 
 body,
@@ -29,7 +29,7 @@ h4,
 h5,
 h6 {
     font-size: 1em;
-    font-family: var(--font-family-headings, sans-serif);
+    font-family: $font-family-headings;
 }
 
 h1,h2{font-size: 2.8em;}
@@ -50,7 +50,7 @@ li {
 
 a {
     text-decoration: none;
-    color: var(--color-text-primary, #505050);
+    color: $color-text-primary;
 }
 
 img {

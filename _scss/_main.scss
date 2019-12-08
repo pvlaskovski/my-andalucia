@@ -1,28 +1,28 @@
 /********** MAIN STYLES **********/
 /* DESTINATIONS */
 .site-content-destinations {
-    background: var(--color-background-primary, #f6f5f2);
+    background: $color-background-primary;
 }
 
 
 .destinations-wrapper{
     
     .destination-preview {
-        border: 1px solid var(--color-background-secondary, #ffc69b);
+        border: 1px solid $color-background-secondary;
     }
     
     .destination-name {
-        color: var(--color-text-secondary, #ffffff);
+        color: $color-text-secondary;
     }
 } 
 
 
 .event-preview .left-section i {
-    color: var(--color-base-primary, #9bb2ff);
+    color: $color-base-primary;
 }
 
 .read-more {
-    color: var(--color-base-primary, #9bb2ff);
+    color: $color-base-primary;
     
     &:hover {
         text-decoration: underline;
@@ -32,7 +32,7 @@
 
 /* EVENTS */
 .site-content-events {
-    background: var(--color-text-secondary, #ffffff);
+    background: $color-text-secondary;
 }
 
 /********** MAIN LAYOUT **********/
@@ -112,7 +112,7 @@
     &:not(:last-child) {
         padding-bottom: 2em;
         margin-bottom: 1em;
-        border-bottom: 2px solid var(--color-text-primary, #505050);
+        border-bottom: 2px solid $color-text-primary;
     }
     
     .event-name {
@@ -170,7 +170,7 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background: var(--color-background-secondary, #ffc69b);
+        background: $color-background-secondary;
         opacity: 0;
         transition: opacity 0.2s ease-in;
     }

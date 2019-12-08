@@ -43,24 +43,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-:root {
-  --font-family-basic: 'Roboto', sans-serif;
-  --font-family-headings: 'Marck Script', cursive;
-  --font-size-small: 10px;
-  --font-size-medium: 14px;
-  --font-size-large: 16px;
-  --font-size-xtra-large: 18px;
-  --color-background-primary: #f6f5f2;
-  --color-background-secondary: #ffc69b;
-  --color-text-primary: #505050;
-  --color-text-secondary: #ffffff;
-  --color-base-primary: #9bb2ff;
-  --color-base-secondary: #a7ff9b;
-  --color-base-third: #ff9ba7; }
-
 html {
-  font: var(--font-size-large, 14px)/1.5 var(--font-family-basic, cursive);
-  color: var(--color-text-primary, #505050); }
+  font: 16px/1.5 "Roboto", sans-serif;
+  color: #505050; }
 
 body,
 table,
@@ -85,7 +70,7 @@ h4,
 h5,
 h6 {
   font-size: 1em;
-  font-family: var(--font-family-headings, sans-serif); }
+  font-family: "Marck Script", cursive; }
 
 h1, h2 {
   font-size: 2.8em; }
@@ -112,7 +97,7 @@ li {
 
 a {
   text-decoration: none;
-  color: var(--color-text-primary, #505050); }
+  color: #505050; }
 
 img {
   display: block;
@@ -121,20 +106,20 @@ img {
 
 /********** HEADER STYLES **********/
 .header-slogan {
-  font-family: var(--font-family-headings, cursive);
+  font-family: "Marck Script", cursive;
   font-size: 4em;
-  color: var(--color-background-secondary, #ffc69b);
+  color: #ffc69b;
   /* ADDING BORDER TO TEXT */
-  text-shadow: -1px 0 var(--color-base-primary, #9bb2ff), 0 1px var(--color-base-primary, #9bb2ff), 1px 0 var(--color-base-primary, #9bb2ff), 0 -1px var(--color-base-primary, #9bb2ff); }
+  text-shadow: -1px 0 #9bb2ff, 0 1px #9bb2ff, 1px 0 #9bb2ff, 0 -1px #9bb2ff; }
 
 .header-nav ul {
   background: rgba(255, 198, 155, 0.8);
   overflow: hidden; }
   .header-nav ul li a {
     padding: 1.5em 1em;
-    color: var(--color-text-secondary, #ffffff); }
+    color: #ffffff; }
   .header-nav ul li:hover {
-    background: var(--color-base-primary, #9bb2ff);
+    background: #9bb2ff;
     /* outline: 1px solid white; */
     box-shadow: -2px 0px 0px 0px white; }
 
@@ -171,25 +156,25 @@ img {
 /********** MAIN STYLES **********/
 /* DESTINATIONS */
 .site-content-destinations {
-  background: var(--color-background-primary, #f6f5f2); }
+  background: #f6f5f2; }
 
 .destinations-wrapper .destination-preview {
-  border: 1px solid var(--color-background-secondary, #ffc69b); }
+  border: 1px solid #ffc69b; }
 
 .destinations-wrapper .destination-name {
-  color: var(--color-text-secondary, #ffffff); }
+  color: #ffffff; }
 
 .event-preview .left-section i {
-  color: var(--color-base-primary, #9bb2ff); }
+  color: #9bb2ff; }
 
 .read-more {
-  color: var(--color-base-primary, #9bb2ff); }
+  color: #9bb2ff; }
   .read-more:hover {
     text-decoration: underline; }
 
 /* EVENTS */
 .site-content-events {
-  background: var(--color-text-secondary, #ffffff); }
+  background: #ffffff; }
 
 /********** MAIN LAYOUT **********/
 /* DESTINATIONS */
@@ -257,7 +242,7 @@ img {
   .event-preview:not(:last-child) {
     padding-bottom: 2em;
     margin-bottom: 1em;
-    border-bottom: 2px solid var(--color-text-primary, #505050); }
+    border-bottom: 2px solid #505050; }
   .event-preview .event-name {
     flex-basis: 100%;
     padding-bottom: 1em; }
@@ -297,7 +282,7 @@ img {
   right: 0;
   bottom: 0;
   left: 0;
-  background: var(--color-background-secondary, #ffc69b);
+  background: #ffc69b;
   opacity: 0;
   -webkit-transition: opacity 0.2s ease-in;
   transition: opacity 0.2s ease-in; }
@@ -312,16 +297,16 @@ img {
 
 /********** FOOTER STYLES **********/
 .site-footer {
-  background: var(--color-background-primary, #f6f5f2); }
+  background: #f6f5f2; }
   .site-footer .main-section {
-    border-right: 3px solid var(--color-base-third, #ff9ba7); }
+    border-right: 3px solid #ff9ba7; }
 
 .contact-us i {
   font-size: 6em;
-  color: var(--color-text-primary, #505050); }
+  color: #505050; }
 
 .footer-secondary-background {
-  background: var(--color-text-secondary, #ffffff); }
+  background: #ffffff; }
 
 /********** FOOTER LAYOUT **********/
 .site-footer {
@@ -351,7 +336,7 @@ img {
   .footer-technologies .technology-img-container {
     width: 8em;
     height: 8em;
-    background: var(--color-base-primary, #9bb2ff);
+    background: #9bb2ff;
     border-radius: 50%;
     display: -webkit-box;
     display: flex;
@@ -400,15 +385,15 @@ img {
 
 @-webkit-keyframes change-color {
   from {
-    color: var(--color-text-primary, #505050); }
+    color: #505050; }
   to {
-    color: var(--color-base-primary, #9bb2ff); } }
+    color: #9bb2ff; } }
 
 @keyframes change-color {
   from {
-    color: var(--color-text-primary, #505050); }
+    color: #505050; }
   to {
-    color: var(--color-base-primary, #9bb2ff); } }
+    color: #9bb2ff; } }
 
 .gallery-heading {
   padding-top: 1em;
@@ -419,7 +404,7 @@ img {
   width: 100%;
   padding: 0 10%;
   padding-bottom: 5em;
-  background: var(--color-text-secondary, #ffffff);
+  background: #ffffff;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-flow: dense;
@@ -510,6 +495,155 @@ img {
     opacity: 0; }
   to {
     opacity: 0.6; } }
+
+/********** CITIES STYLES **********/
+.wrapper .city-upcoming-events {
+  background: #f6f5f2; }
+
+.city-upcoming-events li:hover,
+.city-upcoming-events li:hover a {
+  background: #ff9ba7;
+  color: #ffffff; }
+
+.info-card-stats i {
+  color: #ffffff; }
+
+.info-card-stats span {
+  color: #ffffff; }
+
+/********** CITIES LAYOUT **********/
+/* CITIES HEADER */
+.city-header {
+  text-align: center;
+  padding-top: 3em;
+  padding-bottom: 3em; }
+  .city-header h1 {
+    padding-bottom: 0.5em; }
+
+/* CITIES MAIN */
+.wrapper {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap; }
+  .wrapper .city-header {
+    flex-basis: 100%; }
+  .wrapper .city-main {
+    flex-basis: 80%;
+    padding: 1em 3em 1.5em; }
+    .wrapper .city-main::after {
+      content: "";
+      display: block;
+      clear: both; }
+    .wrapper .city-main p {
+      padding-bottom: 1em; }
+  .wrapper .no-events {
+    margin: auto; }
+  .wrapper .city-upcoming-events {
+    flex-basis: 20%;
+    text-align: center; }
+
+.first-image,
+.second-image {
+  float: left;
+  height: 15em;
+  width: 10em;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2em;
+  padding: 2em;
+  border: 1px solid orange; }
+
+.first-image {
+  margin-right: 1em; }
+
+.second-image {
+  float: right;
+  height: 20em;
+  width: 15em;
+  margin-left: 1em; }
+
+.city-upcoming-events h3 {
+  padding-bottom: 1em; }
+
+.city-upcoming-events li {
+  padding: 0.4em 1em;
+  text-align: left;
+  border-bottom: 2px #ffffff solid; }
+  .city-upcoming-events li a {
+    display: block;
+    padding: 0.4em 0.6em;
+    padding-left: 0; }
+
+.info-card-stats {
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 2em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 100%;
+  -webkit-transition: left 0.3s linear;
+  transition: left 0.3s linear; }
+  .info-card-stats:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #505050;
+    opacity: 0.4; }
+  .info-card-stats i {
+    font-size: 4em;
+    padding: 0.2em 0;
+    position: relative;
+    top: -2em;
+    -webkit-animation-name: bounce;
+            animation-name: bounce;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-transition: top 0.5s cubic-bezier(1, 1.6, 0, 0.8) 0.3s;
+    transition: top 0.5s cubic-bezier(1, 1.6, 0, 0.8) 0.3s; }
+  .info-card-stats span {
+    display: block;
+    padding: 0.5em;
+    position: relative;
+    left: 100%;
+    -webkit-transition: left 0.4s ease-in;
+    transition: left 0.4s ease-in; }
+    .info-card-stats span:nth-child(2) {
+      -webkit-transition-delay: 0.4s;
+              transition-delay: 0.4s; }
+    .info-card-stats span:nth-child(3) {
+      -webkit-transition-delay: 0.5s;
+              transition-delay: 0.5s; }
+    .info-card-stats span:nth-child(4) {
+      -webkit-transition-delay: 0.6s;
+              transition-delay: 0.6s; }
+    .info-card-stats span:nth-child(5) {
+      -webkit-transition-delay: 0.7s;
+              transition-delay: 0.7s; }
+
+.city-header-info-card {
+  width: 30em;
+  height: 20em;
+  margin: auto;
+  position: relative;
+  border: 1px solid #ffc69b;
+  overflow: hidden;
+  border-radius: 3em;
+  display: block; }
+  .city-header-info-card:hover .info-card-stats {
+    left: 0; }
+  .city-header-info-card:hover i {
+    top: 0; }
+
+.city-header-info-card:hover span {
+  left: 0%; }
 
 @media screen and (max-width: 768px) {
   /* HEADER LAYOUT */

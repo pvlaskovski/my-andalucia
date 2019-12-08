@@ -2,15 +2,15 @@
 
 
 .wrapper .city-upcoming-events {
-    background: var(--color-background-primary, #f6f5f2);
+    background: $color-background-primary;
 }
 
 .city-upcoming-events{
 
     li:hover,
     li:hover a {
-        background: var(--color-base-third, #ff9ba7);
-        color: var(--color-text-secondary, #ffffff);
+        background: $color-base-third;
+        color: $color-text-secondary;
     }
 }
 
@@ -18,12 +18,12 @@
 .info-card-stats{
 
     i {
-        color: var(--color-text-secondary, #ffffff);
+        color: $color-text-secondary;
        
     }
     
     span {
-        color: var(--color-text-secondary, #ffffff);
+        color: $color-text-secondary;
     }
 }
 
@@ -108,7 +108,7 @@
     li {
         padding: 0.4em 1em;
         text-align: left;
-        border-bottom: 2px var(--color-text-secondary, #ffffff) solid;
+        border-bottom: 2px $color-text-secondary solid;
         
         a {
             display: block;
@@ -136,7 +136,7 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background: var(--color-text-primary, #505050);
+        background: $color-text-primary;
         opacity: 0.4;
     }
 
@@ -180,7 +180,7 @@
     height: 20em;
     margin: auto;
     position: relative;
-    border: 1px solid var(--color-background-secondary, #ffc69b);
+    border: 1px solid $color-background-secondary;
     overflow: hidden;
     border-radius: 3em;
     display: block;

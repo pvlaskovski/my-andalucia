@@ -2,16 +2,16 @@
 /********** HEADER STYLES **********/
 
 .header-slogan {
-    font-family: var(--font-family-headings, cursive);
+    font-family: $font-family-headings;
     font-size: 4em;
-    color: var(--color-background-secondary, #ffc69b);
+    color: $color-background-secondary;
 
     /* ADDING BORDER TO TEXT */
     text-shadow:
-        -1px 0 var(--color-base-primary, #9bb2ff),
-        0 1px var(--color-base-primary, #9bb2ff),
-        1px 0 var(--color-base-primary, #9bb2ff),
-        0 -1px var(--color-base-primary, #9bb2ff);
+        -1px 0 $color-base-primary,
+        0 1px $color-base-primary,
+        1px 0 $color-base-primary,
+        0 -1px $color-base-primary;
 }
 
 .header-nav ul {
@@ -20,11 +20,11 @@
     
     li a {
         padding: 1.5em 1em;
-        color: var(--color-text-secondary, #ffffff);
+        color: $color-text-secondary;
     }
     
     li:hover {
-        background: var(--color-base-primary, #9bb2ff);
+        background: $color-base-primary;
         /* outline: 1px solid white; */
         box-shadow: -2px 0px 0px 0px white;
     
