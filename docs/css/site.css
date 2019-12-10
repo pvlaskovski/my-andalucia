@@ -621,14 +621,14 @@ img {
       -webkit-transition-delay: 0.4s;
               transition-delay: 0.4s; }
     .info-card-stats span:nth-child(3) {
-      -webkit-transition-delay: 0.5s;
-              transition-delay: 0.5s; }
-    .info-card-stats span:nth-child(4) {
       -webkit-transition-delay: 0.6s;
               transition-delay: 0.6s; }
+    .info-card-stats span:nth-child(4) {
+      -webkit-transition-delay: 0.8s;
+              transition-delay: 0.8s; }
     .info-card-stats span:nth-child(5) {
-      -webkit-transition-delay: 0.7s;
-              transition-delay: 0.7s; }
+      -webkit-transition-delay: 1s;
+              transition-delay: 1s; }
 
 .city-header-info-card {
   width: 30em;
