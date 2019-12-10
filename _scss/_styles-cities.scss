@@ -53,12 +53,13 @@
     .city-main {
         flex-basis: 80%;
         padding: 1em 3em 1.5em;
+        @include clearfix();
         
-        &::after {
-            content: "";
-            display: block;
-            clear: both;
-        }
+        // &::after {
+        //     content: "";
+        //     display: block;
+        //     clear: both;
+        // }
         
         p {
             padding-bottom: 1em;
@@ -130,12 +131,13 @@
     transition: left 0.3s linear;
 
     &:before{
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+        // content: "";
+        // position: absolute;
+        // top: 0;
+        // right: 0;
+        // bottom: 0;
+        // left: 0;
+        @include pseudo(absolute,0,0,0,0);
         background: $color-text-primary;
         opacity: 0.4;
     }

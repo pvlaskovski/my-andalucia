@@ -276,8 +276,9 @@ img {
 
 /********** MAIN ANIMATIONS **********/
 .destination-preview::before {
-  position: absolute;
   content: "";
+  display: block;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -444,12 +445,12 @@ img {
             transform: translate(-50%, -50%); }
   .gallery .gallery-img-container.landscape::before {
     content: "";
-    padding-bottom: 56%;
-    display: block; }
+    display: block;
+    padding-bottom: 56%; }
   .gallery .gallery-img-container.portrait::before {
     content: "";
-    padding-bottom: 120%;
-    display: block; }
+    display: block;
+    padding-bottom: 120%; }
   .gallery .gallery-img-container.panorama::before {
     content: "";
     display: block;
@@ -472,8 +473,8 @@ img {
   right: 0;
   bottom: 0;
   left: 0;
-  background: gray;
-  opacity: 0;
+  background: #ffc69b;
+  opacity: 0%;
   -webkit-animation: increace-opacity 0.1s ease-in forwards;
           animation: increace-opacity 0.1s ease-in forwards; }
 
@@ -488,13 +489,13 @@ img {
   form {
     opacity: 0; }
   to {
-    opacity: 0.6; } }
+    opacity: 0.4; } }
 
 @keyframes increace-opacity {
   form {
     opacity: 0; }
   to {
-    opacity: 0.6; } }
+    opacity: 0.4; } }
 
 /********** CITIES STYLES **********/
 .wrapper .city-upcoming-events {
@@ -533,8 +534,8 @@ img {
     flex-basis: 80%;
     padding: 1em 3em 1.5em; }
     .wrapper .city-main::after {
-      content: "";
-      display: block;
+      content: '';
+      display: table;
       clear: both; }
     .wrapper .city-main p {
       padding-bottom: 1em; }
@@ -590,6 +591,7 @@ img {
   transition: left 0.3s linear; }
   .info-card-stats:before {
     content: "";
+    display: block;
     position: absolute;
     top: 0;
     right: 0;

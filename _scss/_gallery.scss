@@ -60,20 +60,23 @@
     }
 
     .gallery-img-container.landscape::before {
-        content: "";
+        // content: "";
+        // display: block;
+        @include pseudo();
         padding-bottom: 56%;
-        display: block;
     }
 
     .gallery-img-container.portrait::before {
-        content: "";
+        // content: "";
+        // display: block;
+        @include pseudo();
         padding-bottom: 120%;
-        display: block;
     }
 
     .gallery-img-container.panorama::before {
-        content: "";
-        display: block;
+        // content: "";
+        // display: block;
+        @include pseudo();
         padding-bottom: 30%;
 
     }
@@ -98,15 +101,16 @@
     }
 
     .gallery-img-container:hover a::after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: gray;
-        opacity: 0;
+        // content: "";
+        // display: block;
+        // position: absolute;
+        // top: 0;
+        // right: 0;
+        // bottom: 0;
+        // left: 0;
+        @include pseudo(absolute,0,0,0,0);
+        background: $color-background-secondary;
+        opacity: 0%;
         animation: increace-opacity 0.1s ease-in forwards;
     }
 
@@ -126,6 +130,6 @@
     }
 
     to {
-        opacity: 0.6;
+        opacity: 0.4;
     }
 }

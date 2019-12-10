@@ -1,0 +1,20 @@
+@mixin pseudo($position:"", $top: "", $right: "", $bottom: "", $left: "") {
+
+	content: "";
+	display: block;
+
+	position: #{$position};
+	top: #{$top};
+	right: #{$right};
+	bottom: #{$bottom};
+	left: #{$left};
+
+}
+
+@mixin clearfix {
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
