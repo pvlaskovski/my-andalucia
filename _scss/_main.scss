@@ -45,7 +45,13 @@
 
 .site-content-destinations,
 .site-content-events {
-    padding: 0 20%;
+    
+    padding: 0 10%;
+
+    @include breakpoint(desktop){
+        padding: 0 20%;
+    }
+    
     margin: auto;
 }
 
@@ -70,11 +76,23 @@
     justify-content: space-between;
     align-items: stretch;
     
+    @include breakpoint(phone-medium){
+        display: block;
+    }
+
     .destination-preview {
         flex-basis: 30%;
         position: relative;
         vertical-align: middle;
         text-align: center;
+
+        @include breakpoint(phone-medium){
+            display: block;
+
+            &:not(:first-child){
+                margin-top: 0.5em;
+            }
+        }
         
         img {
             display: block;

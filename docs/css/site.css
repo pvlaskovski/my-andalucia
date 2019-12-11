@@ -46,10 +46,10 @@ table {
 html {
   font: 16px/1.5 "Roboto", sans-serif;
   color: #505050; }
-  @media (max-width: 479px) {
+  @media (min-width: 479px) {
     html {
       font-size: 10px; } }
-  @media (min-width: 480px) {
+  @media (max-width: 480px) {
     html {
       font-size: 14px; } }
   @media (min-width: 960px) {
@@ -150,8 +150,12 @@ img {
     box-shadow: -2px 0px 0px 0px #ffffff; }
 
 /********** HEADER LAYOUT **********/
-.site-header .mobile-nav {
+.site-header .nav-menu {
   display: none; }
+  @media (min-width: 479px) {
+    .site-header .nav-menu {
+      display: block;
+      position: absolute; } }
 
 .site-header .img-container {
   height: 50vh;
@@ -159,18 +163,12 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative; }
-  @media (max-width: 479px) {
+  @media (min-width: 479px) {
     .site-header .img-container {
       height: 40vh; } }
   .site-header .img-container .header-slogan {
     text-align: center;
     padding: 1em 0.5em; }
-
-.site-header .nav-menu {
-  display: none; }
-  @media (max-width: 479px) {
-    .site-header .nav-menu {
-      display: block; } }
 
 .header-nav {
   display: block;
@@ -187,7 +185,7 @@ img {
             justify-content: center;
     -webkit-box-align: stretch;
             align-items: stretch; }
-    @media (max-width: 479px) {
+    @media (min-width: 479px) {
       .header-nav ul {
         display: none; } }
     .header-nav ul li {
@@ -225,8 +223,12 @@ img {
 
 .site-content-destinations,
 .site-content-events {
-  padding: 0 20%;
+  padding: 0 10%;
   margin: auto; }
+  @media (min-width: 1024px) {
+    .site-content-destinations,
+    .site-content-events {
+      padding: 0 20%; } }
 
 .site-content-destinations {
   padding-top: 3em;
@@ -249,11 +251,19 @@ img {
           justify-content: space-between;
   -webkit-box-align: stretch;
           align-items: stretch; }
+  @media (max-width: 480px) {
+    .destinations-wrapper {
+      display: block; } }
   .destinations-wrapper .destination-preview {
     flex-basis: 30%;
     position: relative;
     vertical-align: middle;
     text-align: center; }
+    @media (max-width: 480px) {
+      .destinations-wrapper .destination-preview {
+        display: block; }
+        .destinations-wrapper .destination-preview:not(:first-child) {
+          margin-top: 0.5em; } }
     .destinations-wrapper .destination-preview img {
       display: block;
       max-width: 100%;

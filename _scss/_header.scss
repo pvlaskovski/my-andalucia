@@ -55,8 +55,14 @@
 
 .site-header{
 
-    .mobile-nav{
+    // .mobile-nav,
+    .nav-menu{
         display: none;
+        @include breakpoint(phone-small){
+            display: block;
+            position: absolute;
+            
+        }
     }
 
     .img-container {
@@ -77,13 +83,7 @@
         
         }
     }
-
-    .nav-menu{
-        display: none;
-        @include breakpoint(phone-small){
-            display: block;
-        }
-    }
+ 
 }
 
 
