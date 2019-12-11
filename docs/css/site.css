@@ -46,6 +46,18 @@ table {
 html {
   font: 16px/1.5 "Roboto", sans-serif;
   color: #505050; }
+  @media (max-width: 479px) {
+    html {
+      font-size: 10px; } }
+  @media (min-width: 480px) {
+    html {
+      font-size: 14px; } }
+  @media (min-width: 960px) {
+    html {
+      font-size: 16px; } }
+  @media (min-width: 1024px) {
+    html {
+      font-size: 18px; } }
 
 body,
 table,
@@ -645,7 +657,7 @@ img {
     top: 0; }
 
 .city-header-info-card:hover span {
-  left: 0%; }
+  left: 0; }
 
 @media screen and (max-width: 768px) {
   /* HEADER LAYOUT */
