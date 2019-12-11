@@ -7,7 +7,11 @@
         {% else %}
             <p class="header-slogan">The beautiful Andalucia</p>
         {% endif %}
-        <!-- NAVIGATION --> 
+        <!-- NAVIGATION -->
+        <label for="toggle-nav" class="nav-menu">Menu</label>
         {% include navigation.html %}
-    </div>    
+    </div>
+    <div class="mobile-nav">
+        {% include navigation.html %}
+    </div> 
 </header>

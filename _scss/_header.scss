@@ -26,26 +26,67 @@
     li:hover {
         background: $color-base-primary;
         /* outline: 1px solid white; */
-        box-shadow: -2px 0px 0px 0px white;
+        box-shadow: -2px 0px 0px 0px $color-text-secondary;
     
     }
 }
 
+.site-header{
+    .nav-menu{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: rgba(255, 198, 155, 0.8);
+        margin: auto;
+        padding: 0.5em 0.5em;
+        color: $color-text-secondary;
+        text-align: center;
+
+        &:hover{
+            background: $color-base-primary;
+            /* outline: 1px solid white; */
+            box-shadow: -2px 0px 0px 0px $color-text-secondary;
+        }
+    }
+
+}
+
 /********** HEADER LAYOUT **********/
 
-.header-slogan {
-    text-align: center;
-    padding: 0.5em 0;
+.site-header{
+
+    .mobile-nav{
+        display: none;
+    }
+
+    .img-container {
+        height: 50vh;
+        // MIGHT NEED TO AMEND
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+
+        @include breakpoint(phone-small){
+            height: 40vh;
+        }
+        
+        .header-slogan {
+            text-align: center;
+            padding: 1em 0.5em;
+        
+        }
+    }
+
+    .nav-menu{
+        display: none;
+        @include breakpoint(phone-small){
+            display: block;
+        }
+    }
 }
 
-.img-container {
-    height: 60vh;
-    // MIGHT NEED TO AMEND
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
+
 
 .header-nav {
     display: block;
@@ -58,6 +99,10 @@
         flex-flow: row wrap;
         justify-content: center;
         align-items: stretch;
+
+        @include breakpoint(phone-small){
+            display: none;
+        }
         
         li {
             padding: 1em 0;

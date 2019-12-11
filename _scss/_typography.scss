@@ -14,7 +14,7 @@ html {
         font-size: $font-size-large;
     }
 
-    @include breakpoint(desktop){
+    @include breakpoint(desktop-large){
         font-size: $font-size-xtra-large;
     }
 }

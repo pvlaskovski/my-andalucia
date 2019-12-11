@@ -55,7 +55,7 @@ html {
   @media (min-width: 960px) {
     html {
       font-size: 16px; } }
-  @media (min-width: 1024px) {
+  @media (min-width: 1600px) {
     html {
       font-size: 18px; } }
 
@@ -133,19 +133,44 @@ img {
   .header-nav ul li:hover {
     background: #9bb2ff;
     /* outline: 1px solid white; */
-    box-shadow: -2px 0px 0px 0px white; }
+    box-shadow: -2px 0px 0px 0px #ffffff; }
+
+.site-header .nav-menu {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255, 198, 155, 0.8);
+  margin: auto;
+  padding: 0.5em 0.5em;
+  color: #ffffff;
+  text-align: center; }
+  .site-header .nav-menu:hover {
+    background: #9bb2ff;
+    /* outline: 1px solid white; */
+    box-shadow: -2px 0px 0px 0px #ffffff; }
 
 /********** HEADER LAYOUT **********/
-.header-slogan {
-  text-align: center;
-  padding: 0.5em 0; }
+.site-header .mobile-nav {
+  display: none; }
 
-.img-container {
-  height: 60vh;
+.site-header .img-container {
+  height: 50vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative; }
+  @media (max-width: 479px) {
+    .site-header .img-container {
+      height: 40vh; } }
+  .site-header .img-container .header-slogan {
+    text-align: center;
+    padding: 1em 0.5em; }
+
+.site-header .nav-menu {
+  display: none; }
+  @media (max-width: 479px) {
+    .site-header .nav-menu {
+      display: block; } }
 
 .header-nav {
   display: block;
@@ -162,6 +187,9 @@ img {
             justify-content: center;
     -webkit-box-align: stretch;
             align-items: stretch; }
+    @media (max-width: 479px) {
+      .header-nav ul {
+        display: none; } }
     .header-nav ul li {
       padding: 1em 0; }
 
@@ -658,28 +686,3 @@ img {
 
 .city-header-info-card:hover span {
   left: 0; }
-
-@media screen and (max-width: 768px) {
-  /* HEADER LAYOUT */
-  .site-header {
-    margin-bottom: 2em; }
-  .site-header .header-logo {
-    display: block;
-    position: absolute;
-    text-indent: -9999px; }
-  .site-header .header-slogan,
-  .site-header .header-logo,
-  .site-header .header-nav li {
-    display: block;
-    text-align: center;
-    margin: auto; }
-  .site-header .header-nav li a {
-    display: block; }
-  .logo-img-container {
-    margin: auto;
-    width: 40%;
-    padding: 1em; }
-  .logo-img-container img {
-    display: block;
-    width: 100%;
-    height: auto; } }
