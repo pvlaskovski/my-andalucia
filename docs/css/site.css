@@ -284,11 +284,14 @@ img {
   padding-bottom: 5em; }
 
 .event-preview {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap; }
+  display: block; }
+  @media (min-width: 640px) {
+    .event-preview {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-flow: row wrap; } }
   .event-preview:not(:last-child) {
     padding-bottom: 2em;
     margin-bottom: 1em;

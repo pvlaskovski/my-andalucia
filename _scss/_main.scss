@@ -124,8 +124,14 @@
 
 
 .event-preview {
-    display: flex;
-    flex-flow: row wrap;
+
+    display: block;
+
+    @include breakpoint(phone-large){
+        display: flex;
+        flex-flow: row wrap;
+    }
+
 
     &:not(:last-child) {
         padding-bottom: 2em;
