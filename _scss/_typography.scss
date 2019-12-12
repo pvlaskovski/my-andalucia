@@ -2,11 +2,11 @@ html {
     font: #{$font-size-large}/1.5 $font-family-basic;
     color: $color-text-primary;
 
-    @include breakpoint(phone-small){
+    @include breakpoint(phone-medium){
         font-size: $font-size-small;
     }
 
-    @include breakpoint(phone-medium){
+    @include breakpoint(phone-medium-fonts){
         font-size: $font-size-medium;
     }
 

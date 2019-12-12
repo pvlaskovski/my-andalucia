@@ -1,12 +1,16 @@
 /********** FOOTER STYLES **********/
 
 
-
 .site-footer {
     background: $color-background-primary;
     
     .main-section {
         border-right: 3px solid $color-base-third;
+
+        @include breakpoint(footer){
+            border-top: 3px solid $color-base-third;
+            border-right: none;
+        }
     }
 }
 
@@ -29,7 +33,13 @@
     align-items: center;
     
     .main-section {
-        width: 80%;
+        flex-basis: 80%;
+
+        @include breakpoint(footer){
+            flex-basis: 100%;
+            order: 2;
+            padding-top: 1em;
+        }
         
         p {
             width: 100%;
@@ -67,6 +77,14 @@
     justify-content: center;
     align-items: center;
     flex-basis: 20%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    @include breakpoint(footer){
+        flex-basis: 100%;
+        order: 1;
+        padding-bottom: 1em;
+    }
     
     p {
         flex-basis: 100%;

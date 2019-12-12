@@ -1,7 +1,9 @@
 $breakpoints: 
     ('phone-small':  (min-width: 479px),
-    'phone-medium':  (max-width: 480px),
+    'phone-medium':  (max-width: 500px),
+    'phone-medium-fonts':  (max-width: 639px),
     'phone-large':   (min-width: 640px),
+    'footer':     (max-width: 500px),
     'tablet':        (min-width: 768px),
     'tablet-large':  (min-width: 960px),
     'desktop':       (min-width: 1024px),

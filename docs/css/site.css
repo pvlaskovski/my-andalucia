@@ -46,10 +46,10 @@ table {
 html {
   font: 16px/1.5 "Roboto", sans-serif;
   color: #505050; }
-  @media (min-width: 479px) {
+  @media (max-width: 500px) {
     html {
       font-size: 10px; } }
-  @media (max-width: 480px) {
+  @media (max-width: 639px) {
     html {
       font-size: 14px; } }
   @media (min-width: 960px) {
@@ -200,7 +200,8 @@ img {
   border: 1px solid #ffc69b; }
 
 .destinations-wrapper .destination-name {
-  color: #ffffff; }
+  color: #ffffff;
+  line-height: 1; }
 
 .event-preview .left-section i {
   color: #9bb2ff; }
@@ -251,7 +252,7 @@ img {
           justify-content: space-between;
   -webkit-box-align: stretch;
           align-items: stretch; }
-  @media (max-width: 480px) {
+  @media (max-width: 500px) {
     .destinations-wrapper {
       display: block; } }
   .destinations-wrapper .destination-preview {
@@ -259,7 +260,7 @@ img {
     position: relative;
     vertical-align: middle;
     text-align: center; }
-    @media (max-width: 480px) {
+    @media (max-width: 500px) {
       .destinations-wrapper .destination-preview {
         display: block; }
         .destinations-wrapper .destination-preview:not(:first-child) {
@@ -354,6 +355,10 @@ img {
   background: #f6f5f2; }
   .site-footer .main-section {
     border-right: 3px solid #ff9ba7; }
+    @media (max-width: 500px) {
+      .site-footer .main-section {
+        border-top: 3px solid #ff9ba7;
+        border-right: none; } }
 
 .contact-us i {
   font-size: 6em;
@@ -373,7 +378,13 @@ img {
   -webkit-box-align: center;
           align-items: center; }
   .site-footer .main-section {
-    width: 80%; }
+    flex-basis: 80%; }
+    @media (max-width: 500px) {
+      .site-footer .main-section {
+        flex-basis: 100%;
+        -webkit-box-ordinal-group: 3;
+                order: 2;
+        padding-top: 1em; } }
     .site-footer .main-section p {
       width: 100%;
       text-align: center; }
@@ -411,7 +422,15 @@ img {
           justify-content: center;
   -webkit-box-align: center;
           align-items: center;
-  flex-basis: 20%; }
+  flex-basis: 20%;
+  padding-left: 0.5em;
+  padding-right: 0.5em; }
+  @media (max-width: 500px) {
+    .contact-us {
+      flex-basis: 100%;
+      -webkit-box-ordinal-group: 2;
+              order: 1;
+      padding-bottom: 1em; } }
   .contact-us p {
     flex-basis: 100%;
     text-align: center; }
