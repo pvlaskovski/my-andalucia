@@ -15,7 +15,7 @@
         
                 {% for picture in page.pictures %}
                     <li class="gallery-img-container {{ picture.orientation }}">
-                        <a href="#">
+                        <a href="{{ site.baseurl }}/images/{{ picture.url }}" target="_blank">
                             <img src="{{ site.baseurl }}/images/{{ picture.url }}" alt="{{ picture.alt }}" >
                         </a>
                     </li>

@@ -130,6 +130,9 @@ img {
   .header-nav ul li a {
     padding: 1.5em 1em;
     color: #ffffff; }
+  .header-nav ul li label {
+    color: #ffffff;
+    padding: 0em 1em; }
   .header-nav ul li:hover {
     background: #9bb2ff;
     /* outline: 1px solid white; */
@@ -152,10 +155,6 @@ img {
 /********** HEADER LAYOUT **********/
 .site-header .nav-menu {
   display: none; }
-  @media (min-width: 479px) {
-    .site-header .nav-menu {
-      display: block;
-      position: absolute; } }
 
 .site-header .img-container {
   height: 50vh;
@@ -165,7 +164,8 @@ img {
   position: relative; }
   @media (min-width: 479px) {
     .site-header .img-container {
-      height: 40vh; } }
+      height: 40vh;
+      display: block; } }
   .site-header .img-container .header-slogan {
     text-align: center;
     padding: 1em 0.5em; }
@@ -185,9 +185,6 @@ img {
             justify-content: center;
     -webkit-box-align: stretch;
             align-items: stretch; }
-    @media (min-width: 479px) {
-      .header-nav ul {
-        display: none; } }
     .header-nav ul li {
       padding: 1em 0; }
 
@@ -609,8 +606,11 @@ img {
   .wrapper .city-header {
     flex-basis: 100%; }
   .wrapper .city-main {
-    flex-basis: 80%;
+    flex-basis: 100%;
     padding: 1em 3em 1.5em; }
+    @media (min-width: 960px) {
+      .wrapper .city-main {
+        flex-basis: 80%; } }
     .wrapper .city-main::after {
       content: '';
       display: table;
@@ -620,29 +620,42 @@ img {
   .wrapper .no-events {
     margin: auto; }
   .wrapper .city-upcoming-events {
-    flex-basis: 20%;
+    flex-basis: 100%;
     text-align: center; }
+    @media (min-width: 960px) {
+      .wrapper .city-upcoming-events {
+        flex-basis: 20%; } }
 
 .first-image,
 .second-image {
-  float: left;
   height: 15em;
-  width: 10em;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 2em;
   padding: 2em;
   border: 1px solid orange; }
+  @media (min-width: 768px) {
+    .first-image,
+    .second-image {
+      float: left;
+      width: 10em; } }
 
 .first-image {
-  margin-right: 1em; }
+  margin-bottom: 0.5em; }
+  @media (min-width: 768px) {
+    .first-image {
+      margin-right: 1em; } }
 
 .second-image {
-  float: right;
-  height: 20em;
-  width: 15em;
-  margin-left: 1em; }
+  margin: 0.5em 0;
+  height: 15em; }
+  @media (min-width: 768px) {
+    .second-image {
+      height: 20em;
+      width: 15em;
+      float: right;
+      margin-left: 1em; } }
 
 .city-upcoming-events h3 {
   padding-bottom: 1em; }
@@ -711,12 +724,17 @@ img {
 .city-header-info-card {
   width: 30em;
   height: 20em;
+  max-width: 100%;
   margin: auto;
   position: relative;
   border: 1px solid #ffc69b;
   overflow: hidden;
   border-radius: 3em;
   display: block; }
+  @media (max-width: 500px) {
+    .city-header-info-card {
+      width: 25em;
+      height: 15em; } }
   .city-header-info-card:hover .info-card-stats {
     left: 0; }
   .city-header-info-card:hover i {

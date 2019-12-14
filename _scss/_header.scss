@@ -22,6 +22,11 @@
         padding: 1.5em 1em;
         color: $color-text-secondary;
     }
+
+    li label{
+        color: $color-text-secondary;
+        padding: 0em 1em;
+    }
     
     li:hover {
         background: $color-base-primary;
@@ -53,16 +58,10 @@
 
 /********** HEADER LAYOUT **********/
 
-.site-header{
+.site-header{   
 
-    // .mobile-nav,
     .nav-menu{
         display: none;
-        @include breakpoint(phone-small){
-            display: block;
-            position: absolute;
-            
-        }
     }
 
     .img-container {
@@ -75,6 +74,7 @@
 
         @include breakpoint(phone-small){
             height: 40vh;
+            display: block;
         }
         
         .header-slogan {
@@ -85,8 +85,6 @@
     }
  
 }
-
-
 
 .header-nav {
     display: block;
@@ -99,10 +97,6 @@
         flex-flow: row wrap;
         justify-content: center;
         align-items: stretch;
-
-        @include breakpoint(phone-small){
-            display: none;
-        }
         
         li {
             padding: 1em 0;
@@ -110,3 +104,27 @@
     }
 }
 
+
+// .menu-toggle:checked + .site-header .menu-toggle-button .menu-open{
+//     display: none;
+// }
+
+// .menu-toggle:checked + site-header .menu-toggle-button .menu-close{
+//     display: block;
+// }
+
+// .menu-toggle:checked + site-header .mobile-nav{
+//     display: block !important;
+// }
+
+// .mobile-nav{    
+//     .header-nav{
+//         position: static;
+//         display: block;
+
+//         ul{
+//             display: block;
+//         }
+//     }
+
+// }

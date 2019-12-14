@@ -1,6 +1,5 @@
 /********** CITIES STYLES **********/
 
-
 .wrapper .city-upcoming-events {
     background: $color-background-primary;
 }
@@ -51,15 +50,13 @@
     }
     
     .city-main {
-        flex-basis: 80%;
+        flex-basis: 100%;
+        @include breakpoint(tablet-large){
+            flex-basis: 80%;
+        }
+
         padding: 1em 3em 1.5em;
         @include clearfix();
-        
-        // &::after {
-        //     content: "";
-        //     display: block;
-        //     clear: both;
-        // }
         
         p {
             padding-bottom: 1em;
@@ -71,16 +68,25 @@
     }
     
     .city-upcoming-events {
-        flex-basis: 20%;
+
+        flex-basis: 100%;
         text-align: center;
+
+        @include breakpoint(tablet-large){
+            flex-basis: 20%;
+        }
     }
 }
 
 .first-image,
 .second-image {
-    float: left;
+
+    @include breakpoint(tablet){
+        float: left;
+        width: 10em;
+    }
+
     height: 15em;
-    width: 10em;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -90,15 +96,25 @@
 }
 
 .first-image {
-    margin-right: 1em;
+    margin-bottom: 0.5em;
+
+    @include breakpoint(tablet){
+        margin-right: 1em;
+    }
 }
 
 .second-image {
-    float: right;
-    height: 20em;
-    width: 15em;
-    margin-left: 1em;
+    margin: 0.5em 0;
+    height: 15em;
+
+    @include breakpoint(tablet){
+        height: 20em;
+        width: 15em;
+        float: right;
+        margin-left: 1em;
+    }
 }
+
 
 .city-upcoming-events {
 
@@ -131,12 +147,6 @@
     transition: left 0.3s linear;
 
     &:before{
-        // content: "";
-        // position: absolute;
-        // top: 0;
-        // right: 0;
-        // bottom: 0;
-        // left: 0;
         @include pseudo(absolute,0,0,0,0);
         background: $color-text-primary;
         opacity: 0.4;
@@ -164,28 +174,18 @@
                 transition-delay: $i*0.2s;
             }
         }
-
-        // &:nth-child(2) {
-        //     transition-delay: 0.4s;
-        // }
-        
-        // &:nth-child(3) {
-        //     transition-delay: 0.5s;
-        // }
-        
-        // &:nth-child(4) {
-        //     transition-delay: 0.6s;
-        // }
-        
-        // &:nth-child(5) {
-        //     transition-delay: 0.7s;
-        // }
     }
 }
 
 .city-header-info-card {
+    @include breakpoint(phone-medium){
+        width: 25em;
+        height: 15em;
+    }
+
     width: 30em;
     height: 20em;
+    max-width: 100%;
     margin: auto;
     position: relative;
     border: 1px solid $color-background-secondary;
