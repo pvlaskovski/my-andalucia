@@ -347,6 +347,18 @@ img {
   transition: font-size 0.3s ease-in;
   font-size: 2.2em; }
 
+.event {
+  padding: 0 10%;
+  padding-top: 3em;
+  padding-bottom: 5em; }
+  .event h1 {
+    text-align: center; }
+
+.map {
+  display: block;
+  text-align: center;
+  margin-top: 2em; }
+
 /********** FOOTER STYLES **********/
 .site-footer {
   background: #f6f5f2; }

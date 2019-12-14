@@ -16,10 +16,18 @@
             <main class="event-content">
                 {{ content }}
             </main>
+
+            <footer>
+                {% if page.map %} 
+                    <div class = "map">
+                        {{ page.map }}
+                    </div>
+                {% endif %}
+            </footer>
         </article>
 
-        <!-- TODO: add static city banner that always stays in the middle of the main event section -->
     </main>
+
 
     {% include footer.html %}
 
