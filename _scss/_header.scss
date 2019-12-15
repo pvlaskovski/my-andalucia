@@ -30,9 +30,7 @@
     
     li:hover {
         background: $color-base-primary;
-        /* outline: 1px solid white; */
         box-shadow: -2px 0px 0px 0px $color-text-secondary;
-    
     }
 }
 
@@ -49,23 +47,20 @@
 
         &:hover{
             background: $color-base-primary;
-            /* outline: 1px solid white; */
             box-shadow: -2px 0px 0px 0px $color-text-secondary;
         }
     }
-
 }
 
 /********** HEADER LAYOUT **********/
 
 .site-header{   
-
     .nav-menu{
         display: none;
     }
 
     .img-container {
-        height: 50vh;
+        height: 40vh;
         // MIGHT NEED TO AMEND
         background-position: center;
         background-repeat: no-repeat;
@@ -73,7 +68,7 @@
         position: relative;
 
         @include breakpoint(phone-small){
-            height: 40vh;
+            height: 60vh;
             display: block;
         }
         
@@ -83,7 +78,6 @@
         
         }
     }
- 
 }
 
 .header-nav {
@@ -103,28 +97,3 @@
         }
     }
 }
-
-
-// .menu-toggle:checked + .site-header .menu-toggle-button .menu-open{
-//     display: none;
-// }
-
-// .menu-toggle:checked + site-header .menu-toggle-button .menu-close{
-//     display: block;
-// }
-
-// .menu-toggle:checked + site-header .mobile-nav{
-//     display: block !important;
-// }
-
-// .mobile-nav{    
-//     .header-nav{
-//         position: static;
-//         display: block;
-
-//         ul{
-//             display: block;
-//         }
-//     }
-
-// }

@@ -135,7 +135,6 @@ img {
     padding: 0em 1em; }
   .header-nav ul li:hover {
     background: #9bb2ff;
-    /* outline: 1px solid white; */
     box-shadow: -2px 0px 0px 0px #ffffff; }
 
 .site-header .nav-menu {
@@ -149,7 +148,6 @@ img {
   text-align: center; }
   .site-header .nav-menu:hover {
     background: #9bb2ff;
-    /* outline: 1px solid white; */
     box-shadow: -2px 0px 0px 0px #ffffff; }
 
 /********** HEADER LAYOUT **********/
@@ -157,14 +155,14 @@ img {
   display: none; }
 
 .site-header .img-container {
-  height: 50vh;
+  height: 40vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative; }
   @media (min-width: 479px) {
     .site-header .img-container {
-      height: 40vh;
+      height: 60vh;
       display: block; } }
   .site-header .img-container .header-slogan {
     text-align: center;

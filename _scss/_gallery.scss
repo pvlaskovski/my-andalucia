@@ -70,27 +70,20 @@
     }
 
     .gallery-img-container.landscape::before {
-        // content: "";
-        // display: block;
         @include pseudo();
         padding-bottom: 56%;
     }
 
     .gallery-img-container.portrait::before {
-        // content: "";
-        // display: block;
         @include pseudo();
         padding-bottom: 120%;
     }
 
     .gallery-img-container.panorama::before {
-        // content: "";
-        // display: block;
         @include pseudo();
         padding-bottom: 30%;
 
     }
-
 
     .gallery-img-container.portrait {
         grid-row: span 2;
@@ -111,13 +104,6 @@
     }
 
     .gallery-img-container:hover a::after {
-        // content: "";
-        // display: block;
-        // position: absolute;
-        // top: 0;
-        // right: 0;
-        // bottom: 0;
-        // left: 0;
         @include pseudo(absolute,0,0,0,0);
         background: $color-background-secondary;
         opacity: 0%;
