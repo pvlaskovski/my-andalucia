@@ -357,7 +357,11 @@ img {
 .map {
   display: block;
   text-align: center;
-  margin-top: 2em; }
+  margin-top: 2em;
+  max-width: 100%; }
+  .map iframe {
+    max-width: 100%;
+    padding: 0 0.5em; }
 
 /********** FOOTER STYLES **********/
 .site-footer {
@@ -707,10 +711,6 @@ img {
     padding: 0.2em 0;
     position: relative;
     top: -2em;
-    -webkit-animation-name: bounce;
-            animation-name: bounce;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
     -webkit-transition: top 0.5s cubic-bezier(1, 1.6, 0, 0.8) 0.3s;
     transition: top 0.5s cubic-bezier(1, 1.6, 0, 0.8) 0.3s; }
   .info-card-stats span {
