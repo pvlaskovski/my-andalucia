@@ -17,17 +17,34 @@
 
 <body>
 
-    <!-- <input type="checkbox" name="menu-toggle" class="menu-toggle" id="menu-toggle"> -->
-<header class="site-header">       
-    <!-- MAIN IMG SECTION -->
-    <div class="img-container" style="background-image: url(/my-andalucia/images/ronda_bul_ring_2400_x_1600.jpg);">
-        <!-- LOGO -->
-        
-        <p class="header-slogan">The beautiful Andalucia</p>
-        
-        <!-- NAVIGATION -->
+    <div class="header-wrapper">
+    <header class="site-header">       
+        <!-- MAIN IMG SECTION -->
+        <div class="img-container" style="background-image: url(/my-andalucia/images/ronda_bul_ring_2400_x_1600.jpg);">
+            <!-- LOGO -->
+            
+            <p class="header-slogan">The beautiful Andalucia</p>
+            
+            <!-- NAVIGATION -->
+            <nav class="header-nav">
+    <ul>
+        <li class="nav-button"><a href="/my-andalucia/" >Home</a></li>
+        <li class="nav-button"><a href="/my-andalucia/one-day-in">One Day In</a></li>
+        <li class="nav-button"><a href="/my-andalucia/events">Events</a></li>
+        <li class="nav-button"><a href="/my-andalucia/gallery">Gallery</a></li>
+    </ul>
+</nav>
+
+        </div>
+    </div>
+
+    <input type="checkbox" name="menu-toggle" class="menu-toggle" id="menu-toggle">
+    <div class="mobile-nav">
+        <label for="menu-toggle" class="menu-toggle-button">
+            <span class="menu-open">Menu</span>
+            <span class="menu-close">Close</span>
+        </label>
         <nav class="header-nav">
-    
     <ul>
         <li class="nav-button"><a href="/my-andalucia/" >Home</a></li>
         <li class="nav-button"><a href="/my-andalucia/one-day-in">One Day In</a></li>

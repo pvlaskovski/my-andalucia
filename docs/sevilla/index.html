@@ -19,17 +19,34 @@
 
 <body>
 
-    <!-- <input type="checkbox" name="menu-toggle" class="menu-toggle" id="menu-toggle"> -->
-<header class="site-header">       
-    <!-- MAIN IMG SECTION -->
-    <div class="img-container" style="background-image: url(/my-andalucia/images/ronda_bul_ring_2400_x_1600.jpg);">
-        <!-- LOGO -->
-        
-        <p class="header-slogan">The beautiful Andalucia</p>
-        
-        <!-- NAVIGATION -->
+    <div class="header-wrapper">
+    <header class="site-header">       
+        <!-- MAIN IMG SECTION -->
+        <div class="img-container" style="background-image: url(/my-andalucia/images/ronda_bul_ring_2400_x_1600.jpg);">
+            <!-- LOGO -->
+            
+            <p class="header-slogan">The beautiful Andalucia</p>
+            
+            <!-- NAVIGATION -->
+            <nav class="header-nav">
+    <ul>
+        <li class="nav-button"><a href="/my-andalucia/" >Home</a></li>
+        <li class="nav-button"><a href="/my-andalucia/one-day-in">One Day In</a></li>
+        <li class="nav-button"><a href="/my-andalucia/events">Events</a></li>
+        <li class="nav-button"><a href="/my-andalucia/gallery">Gallery</a></li>
+    </ul>
+</nav>
+
+        </div>
+    </div>
+
+    <input type="checkbox" name="menu-toggle" class="menu-toggle" id="menu-toggle">
+    <div class="mobile-nav">
+        <label for="menu-toggle" class="menu-toggle-button">
+            <span class="menu-open">Menu</span>
+            <span class="menu-close">Close</span>
+        </label>
         <nav class="header-nav">
-    
     <ul>
         <li class="nav-button"><a href="/my-andalucia/" >Home</a></li>
         <li class="nav-button"><a href="/my-andalucia/one-day-in">One Day In</a></li>
@@ -64,9 +81,8 @@
             </header>
 
             <!-- Selecting the events for the current city -->
-            
-    
-            <main class="city-main no-events" >
+                
+            <main class="city-main " >
                 
                     
                         <p>The city of Seville is famous worldwide for its culture, monuments, traditions and artistic heritage. </p>
@@ -95,10 +111,26 @@
                     
                 
                 
+                    
+                        <p>For all its important monuments and fascinating history, Sevilla is universally famous for being a joyous town. While the Sevillians are known for their wit and sparkle, the city itself is striking for its vitality. It is the largest town in Southern Spain, the city of Carmen, Don Juan and Figaro. </p>
+                    
+                
+                
 
             </main>
     
             <!-- Show sidebar if there are upcoming events -->
+            
+                <aside class="city-upcoming-events">
+                    <h3>Upcoming Events</h3>
+                    <ul>
+                        
+                            <li>
+                                <a href="/my-andalucia/feria-sevilla/">Feria de Sevilla</a>
+                            </li> 
+                        
+                    </ul>
+                </aside>
             
         </article>
 

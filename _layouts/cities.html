@@ -30,8 +30,7 @@
             </header>
 
             <!-- Selecting the events for the current city -->
-            {% assign events_ordered_by_date = site.events | where: 'destination', {{ page.title }} | sort: 'date' | reverse  %}
-    
+            {% assign events_ordered_by_date = site.events | where: 'destination', {{page.title}} | sort: 'date' | reverse  %}    
             <main class="city-main {%if events_ordered_by_date.size == 0 %}no-events{%endif%}" >
                 {% for paragraph in page.text %}
                     {% if forloop.index == 2 %}

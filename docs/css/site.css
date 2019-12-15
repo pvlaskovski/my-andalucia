@@ -130,9 +130,6 @@ img {
   .header-nav ul li a {
     padding: 1.5em 1em;
     color: #ffffff; }
-  .header-nav ul li label {
-    color: #ffffff;
-    padding: 0em 1em; }
   .header-nav ul li:hover {
     background: #9bb2ff;
     box-shadow: -2px 0px 0px 0px #ffffff; }
@@ -167,12 +164,18 @@ img {
   .site-header .img-container .header-slogan {
     text-align: center;
     padding: 1em 0.5em; }
+    @media (max-width: 500px) {
+      .site-header .img-container .header-slogan {
+        padding: 0 0.5em; } }
 
 .header-nav {
   display: block;
   position: absolute;
   bottom: 0;
   width: 100%; }
+  @media (max-width: 500px) {
+    .header-nav {
+      display: none; } }
   .header-nav ul {
     display: -webkit-box;
     display: flex;
@@ -185,6 +188,53 @@ img {
             align-items: stretch; }
     .header-nav ul li {
       padding: 1em 0; }
+
+.menu-toggle {
+  position: absolute;
+  display: none;
+  pointer-events: none; }
+
+.menu-toggle-button {
+  display: block;
+  background: rgba(255, 198, 155, 0.8);
+  color: #ffffff;
+  padding: 0.5em 0.2em;
+  text-align: center; }
+
+@media (min-width: 501px) {
+  .mobile-nav {
+    display: none; } }
+
+.mobile-nav .header-nav {
+  display: block;
+  position: static; }
+  .mobile-nav .header-nav li {
+    flex-basis: 100%;
+    padding: 0.5em 0.2em;
+    text-align: center; }
+    .mobile-nav .header-nav li a {
+      padding: 0.5em 0.2em; }
+
+.menu-close {
+  display: none; }
+
+.menu-open {
+  display: block; }
+
+.mobile-nav ul {
+  display: none; }
+
+.menu-toggle:checked + .mobile-nav .menu-toggle-button {
+  background: #9bb2ff; }
+
+.menu-toggle:checked + .mobile-nav ul {
+  display: block; }
+
+.menu-toggle:checked + .mobile-nav .menu-open {
+  display: none; }
+
+.menu-toggle:checked + .mobile-nav .menu-close {
+  display: block; }
 
 /********** MAIN STYLES **********/
 /* DESTINATIONS */
