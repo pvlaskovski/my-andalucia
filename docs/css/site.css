@@ -617,13 +617,6 @@ img {
   -webkit-animation: increace-opacity 0.1s ease-in forwards;
           animation: increace-opacity 0.1s ease-in forwards; }
 
-.gallery .gallery-img-container span {
-  position: absolute;
-  top: 5%;
-  right: 10%;
-  color: white;
-  z-index: 1; }
-
 @-webkit-keyframes increace-opacity {
   form {
     opacity: 0; }

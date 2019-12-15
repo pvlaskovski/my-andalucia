@@ -110,14 +110,6 @@
         animation: increace-opacity 0.1s ease-in forwards;
     }
 
-    .gallery-img-container span {
-        position: absolute;
-        top: 5%;
-        right: 10%;
-        color: white;
-        z-index: 1;
-    }
-
 }
 
 @keyframes increace-opacity {
